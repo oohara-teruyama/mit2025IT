@@ -2,63 +2,95 @@ body {
     font-family: sans-serif;
     margin: 20px;
     background-color: #FFF4E0; /* クリーム色のカラーコード */
-}
-
-header {
+    }
+    
+    header {
     text-align: center;
     margin-bottom: 20px;
-}
+    }
+    
+    #password-popup {
+    position: fixed; /* 画面に対して固定 */
+    top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%); /* 中央に配置 */
+     background-color: #fff;
+     padding: 20px;
+     border-radius: 5px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+     z-index: 11; /* オーバーレイより上に */
+     text-align: center;
+     display: none; /* 最初は非表示 */
+    }
+    
+    #password-input {
+    padding: 10px;
+    padding-top: 13px;
+    margin-bottom: 10px;
+    width: 200px;
+    }
+    
+    #password-submit {
+     padding: 10px 20px;
+     cursor: pointer;
+    }
+    
+    #message {
+     color: red;
+     margin-top: 10px;
+    }
+    
+    .filter {
+     margin-top: 10px;
+    }
+    
+    .filter-button {
+     padding: 8px 15px;
+     margin: 5px;
+     border: 1px solid #ccc;
+     cursor: pointer;
+     border-radius: 5px; /* 角丸にする */
+    }
+    
+    .filter-button.active {
+     background-color: #007bff;
+     color: white;
+     border-color: #007bff;
+    }
+    
+    .filter-button:hover {
+     background-color: #007bff; /* ホバー時の色を少し暗くする */
+     color: white;
+    }
+    
+    .student-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* こちらを推奨 */
+     gap: 20px;
+    }
 
-.filter {
-    margin-top: 10px;
-}
+    .student-item a {
+        text-decoration: none;
+        color: inherit;
+        display: flex; /* これを追加 */
+        flex-direction: column; /* 画像とテキストを縦並びにする場合はこれ */
+        align-items: center; /* Flexboxアイテムを中央に揃える */
+    }
+    
+    
+    .student-item img {
+     width: 80px;
+     height: 80px;
+     border-radius: 30%;
+     object-fit: cover;
+     margin-bottom: 5px;
+     margin-bottom: 0;
+    }
+        
+    .student-item p {
+     margin-top: 0;
+    }
 
-.filter-button {
-    padding: 8px 15px;
-    margin: 5px;
-    border: 1px solid #ccc;
-    cursor: pointer;
-    border-radius: 5px; /* 角丸にする */
-}
-
-.filter-button.active {
-    background-color: #007bff;
-    color: white;
-    border-color: #007bff;
-}
-
-.filter-button:hover {
-    background-color: #007bff; /* ホバー時の色を少し暗くする */
-    color: white;
-}
-.student-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-}
-
-.student-item img {
-    width: 80px; /* 固定の幅 */
-    height: 80px; /* 固定の高さ */
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 5px;
-}
-
-.student-item img {
-    width: 80px;
-    height: 80px;
-    border-radius: 30%;
-    object-fit: cover;
-    margin-bottom: 5px;
-    margin-bottom: 0;
-}
-
-.student-item a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.student-item p {
-    margin-top: 0;
-}
+    .student-item.hidden {
+        display: none;
+    }
