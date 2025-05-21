@@ -1,0 +1,255 @@
+@charset "utf-8";
+
+/* 共通部分 */
+/* 全体 */
+body{
+    font-family: "Segoe UI", "Helvetica", "Arial", "Yu Gothic", "YuGothic", "メイリオ", sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+a {
+    color: #014EA8;
+}
+a:hover {
+    color: #3edcff;
+    font-weight: bold;
+    text-decoration: none;
+}
+a img{transition: opacity 0.2s linear;}
+a:hover img { opacity: 0.7;}
+h1, h2, h3, h4, h5, h6 { margin-top: 0;}
+p {
+    margin-top: 0;
+    line-height: 1.6;
+}
+img { vertical-align: bottom;}
+/* 全体 */
+
+/* ヘッダー */
+header{
+    width: 980px;
+    margin: 0 auto;
+}
+header h1{
+    float: left;
+    margin: 5px 0 10px;
+}
+header h1 img{
+    width: 202px;
+    height: 113.5px;
+}
+
+/* ヘッダー */
+
+/* グローバルナビ */
+#global_navi{
+    float: right;
+    width: 777px;
+    height: 113.5px;
+    background: #014EA8;
+    margin-top: 5px;
+    padding: 0;
+    text-align: center;
+}
+#global_navi ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+#global_navi li{
+    margin-left: 40px;
+    margin-right: 10px;
+}
+#global_navi li a{
+    display: block;
+    padding: 30px 50px;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: solid 5px #014EA8;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.2s linear;
+}
+
+#global_navi ul li.current a{
+    border-bottom-color: #3edcff;
+}
+#global_navi ul li a:hover{
+    border-bottom-color: rgb(156, 215, 255);
+}
+/* グローバルナビ */
+
+/* ラッパー */
+#wrapper{
+    width: 980px;
+    margin: 0 auto;
+    overflow: hidden;
+    clear: both;
+}
+#wrapper #url{
+    float: right;
+    text-align: right;
+    margin-right: 10px;
+}
+/* ラッパー */
+
+/* メイン */
+
+#main h1 {
+    padding: 30px 30px 30px 20px;
+    font-size: 26px;
+    border-bottom: solid 3px #48808b;
+}
+#main h2{
+    font-size: 22px;
+    padding: 11px 22px;
+}
+#main h3{
+    font-size: 18px;
+    padding: 4px 9px 4px 14px;
+}
+/* メイン */
+
+/* フッター */
+footer{
+    background-color: #014EA8;
+    text-align: center;
+    width: 980px;
+    margin: auto;
+}
+footer #footer_nav{
+    background-color: #dee0e0;
+    padding: 10px 0;
+}
+footer #footer_nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+footer #footer_nav li{
+    display: inline;
+    border-left: solid 1px #aaa;
+    margin-left: 8px;
+    padding-left: 8px;
+    font-size: smaller;
+}
+footer #footer_nav li:last-child{
+    border-right: solid 1px #aaa;
+    padding: 0 8px;
+}
+footer #footer_nav li:last-child{
+    border-right: solid 1px #aaa;
+    padding: 0 8px;
+}
+footer p{
+    display: block;
+    padding: 8px 0;
+    color: #fff;
+}
+footer small{
+    display: block;
+    padding: 8px 0;
+    color: #fff;
+}
+/* フッター */
+
+/* ここまで共通部分 */
+
+/* 各ページ */
+/* HOME（index.html） */
+#itemized h2{
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+#itemized img{
+    width: 80%;
+}
+/* HOME（index.html） */
+
+/* 選手一覧（member.html） */
+#member table{
+    width: 90%;
+    margin-left: 5%;
+    border-collapse: collapse;
+    margin-bottom: 16px;
+}
+#member th,
+#member td{
+    border: 1px solid #333;
+}
+#member thead{
+    background-color: #6cd1ffd6;
+    text-align: center;
+}
+#member tbody{
+    background-color: #fff;
+    text-align: center;
+}
+#member h3{
+    text-align: center;
+}
+/* 選手一覧（member.html） */
+
+/* 本拠地（stadium.html） */
+#map .introduction p{
+    margin-left: 15px;
+}
+/* 本拠地（stadium.html） */
+
+/* 球団史（history.html） */
+#history img{
+    float: left;
+    width: 420px;
+    margin: 0 15px 20px 0;
+}
+/* 球団史（history.html） */
+
+/* メディアクエリ（スマホ版） */
+@media screen and (max-width : 767px){
+    img,
+    iframe {
+        max-width: 100%;
+    }
+    header,
+    #global_navi,
+    #wrapper,
+    footer {
+        width: 100%;
+    }
+    header h1{
+        float: none;
+        text-align: center;
+    }
+    header h1 img{
+        width: 50%;
+    }
+    #global_navi{
+        display: none;
+    }
+    #main{
+        width: 100%;
+        padding: 0 5%;
+        box-sizing: border-box;
+    }
+    #itemized {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+    #member h3{
+        font-size: 14px;
+    }
+    #member table{
+        width: 100%;
+        margin: 0;
+    }
+    #wrapper #url{
+        font-size: 14px;
+    }
+}
+/* メディアクエリ（スマホ版） */
