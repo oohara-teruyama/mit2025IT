@@ -1,0 +1,326 @@
+/* style.css */
+@charset "utf-8";
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+header img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+header h1 {
+    margin-top: 15px;
+    font-size: 2em;
+}
+header p {
+    font-size: 1.1em;
+    color: #aaa;
+}
+ナビゲーション
+nav {
+    background-color: #121212;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* 中央配置 */
+    gap: 30px; /* 項目間の間隔 */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav ul li a.current {
+    color: #F7CB4D; /* カレントページの文字色 */
+    font-weight: bold; /* 強調表示（任意） */
+    border-bottom: #F7CB4D;
+}
+
+section {
+    margin-bottom: 40px;
+}
+main h1 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: auto;
+}
+main ul {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+main h2 {
+    text-align: center;
+    margin-bottom: auto;
+    margin-bottom: 50px;
+}
+main h3 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+main h4 {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: auto;
+}
+ul{
+  padding-left:0;
+}
+li{
+  list-style:none;
+}
+
+/* モーダルウィンドウ */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.music-list, .sports-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.artist, .sport {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #444; /* 背景をグレーに */
+    color: #ffffff; /* 文字を白に */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: rgb(71, 67, 67); /* モーダル背景 */
+    color: #ffffff; /* モーダルの文字 */
+    padding: 20px;
+    width: 300px;
+    margin: 15% auto;
+    position: relative;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+footer {
+    background-color: #444;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* アイコンとリンクの間のスペース */
+}
+
+.footer-container img.footer-icon {
+    width: 30px; /* アイコンのサイズ */
+    height: 30px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.social img {
+    width: 24px;
+    height: 24px;
+}
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.side-image {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.text {
+    text-align: left;
+    font-size: 20px;
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+}
+
+.image-row img {
+    width: 200px;
+    height: auto;
+    margin: 10px;
+}
+
+.artist{
+    transition: 0.4s;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+    box-sizing: border-box;
+    color: #FFF;
+    text-decoration: none;
+}
+.artist:hover{
+    opacity: 0.7;
+}
+.sport{
+    transition: 0.4s;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+    box-sizing: border-box;
+    color: #FFF;
+    text-decoration: none;
+}
+.sport:hover{
+    opacity: 0.7;
+}
+.footer-container a {
+    color: blue;
+    text-decoration: none;
+}
+
+.footer-container a:hover {
+    text-decoration: underline;
+}
+
+body {
+  background-color: #121212;
+  color: #fff;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+nav{
+text-align: center;
+}
+nav ul{
+margin: 0 ;
+padding: 0 ;
+}
+nav li{
+list-style: none;
+display: inline-block;
+width: 10%;
+min-width: 90px;
+}
+nav li:not(:last-child){
+border-right:2px solid #ddd;
+}
+nav a{
+text-decoration: none;
+color: #121212;
+}
+nav a:hover{
+color:#F7CB4D;
+border-bottom:2px solid #F7CB4D;
+}
+
+/* 写真 */
+.container {
+    width: 100%;
+    margin: auto;
+}
+
+.side-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 30%;
+    height: auto; /* 高さを自動調整 */
+}
+
+/* スマホ対応 */
+@media (max-width : 767px){
+  img {
+    max-width: 100%;
+  }
+  header,
+  #nav,
+  #body{
+    width: 100%;
+  }
+  .container {
+        flex-direction: column; /* スマホでは縦並び */
+        align-items: center; /* 中央揃え */
+  }
+   .side-image {
+        max-width: 100%; /* スマホでは幅いっぱいに */
+  }
+   .text {
+        text-align: center; /* スマホでは中央揃え */
+  }
+  /* nav {
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  } */
+    nav {
+    display: flex;
+    flex-direction: column; /* 縦並びにする */
+    align-items: center;
+  }
+
+  nav a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+  }
+}
