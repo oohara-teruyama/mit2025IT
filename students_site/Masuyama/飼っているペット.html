@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>飼っているペット</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png/ｍ.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Meiryo', 'Yu Gothic', sans-serif;
+            background: linear-gradient(-45deg, #e3e6ef 0%, #cfd8dc 40%, #b0bec5 70%, #b39ddb 100%);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        @keyframes gradientBG {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+        .container {
+            max-width: 520px;
+            margin: 60px auto 40px auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+            padding: 40px 28px 32px 28px;
+            text-align: center;
+            position: relative;
+            overflow: visible;
+            z-index: 1;
+        }
+        .bg-deco {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .bg-deco span, .bg-deco i {
+            position: absolute;
+            opacity: 0.18;
+            filter: blur(0.5px);
+            animation: deco-float 8s infinite alternate;
+        }
+        .bg-deco .deco1 { width: 48px; height: 48px; background: #f8bbd0; top: 24px; left: 32px; border-radius: 50%; animation-delay: 0s;}
+        .bg-deco .deco2 { width: 32px; height: 32px; background: #b2dfdb; top: 80px; right: 40px; border-radius: 50%; animation-delay: 1s;}
+        .bg-deco .deco3 { width: 24px; height: 24px; background: #fff59d; bottom: 60px; left: 60px; border-radius: 50%; animation-delay: 2s;}
+        .bg-deco .deco4 { width: 36px; height: 36px; background: #90caf9; bottom: 40px; right: 40px; border-radius: 50%; animation-delay: 3s;}
+        .bg-deco .deco5 { width: 28px; height: 28px; background: #ce93d8; top: 50%; left: 10px; border-radius: 50%; animation-delay: 1.5s;}
+        .bg-deco .deco6 { width: 20px; height: 20px; background: #ffccbc; bottom: 20px; right: 20%; border-radius: 50%; animation-delay: 2.5s;}
+        /* 星型デコ */
+        .bg-deco .star {
+            width: 32px; height: 32px;
+            color: #ffd700;
+            top: 20%; right: 18%;
+            opacity: 0.22;
+            font-size: 2rem;
+            animation-delay: 1.2s;
+        }
+        .bg-deco .star2 {
+            width: 24px; height: 24px;
+            color: #f48fb1;
+            bottom: 18%; left: 12%;
+            opacity: 0.18;
+            font-size: 1.5rem;
+            animation-delay: 2.7s;
+        }
+        @keyframes deco-float {
+            0% { transform: translateY(0);}
+            100% { transform: translateY(-16px);}
+        }
+        h1 {
+            margin: 0 0 24px 0;
+            color: #1976d2;
+            font-size: 2.1rem;
+            letter-spacing: 0.05em;
+            border-bottom: 2px solid #90caf9;
+            display: inline-block;
+            padding-bottom: 6px;
+        }
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 18px;
+            margin-bottom: 32px;
+        }
+        .btn {
+            font-family: 'k-Font', 'Segoe UI', 'Meiryo', 'Yu Gothic', sans-serif;
+            background: linear-gradient(90deg, #1976d2 60%, #64b5f6 100%);
+            color: #fff;
+            border: none;
+            padding: 18px 0;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            margin: 0;
+            min-width: 140px;
+            flex: 1 1 140px;
+            box-sizing: border-box;
+            box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+            font-weight: bold;
+            letter-spacing: 0.05em;
+            text-align: center;
+            display: block;
+        }
+        .btn:hover, .btn:focus {
+            background: linear-gradient(90deg, #1565c0 60%, #42a5f5 100%);
+            transform: translateY(-2px) scale(1.04);
+            box-shadow: 0 4px 16px rgba(25, 118, 210, 0.18);
+        }
+        .pet-info {
+            text-align: left;
+            margin: 0 auto 16px auto;
+            font-size: 1.08rem;
+            line-height: 2.1;
+            display: table;
+        }
+        .pet-info li {
+            margin-bottom: 8px;
+            padding-left: 0.5em;
+        }
+        .pet-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #90caf9;
+            margin: 16px auto 24px auto;
+            display: block;
+            position: relative;
+            z-index: 2; /* ← 画像を最前面に */
+        }
+        .footer {
+            text-align: center;
+            color: #888;
+            font-size: 0.95em;
+            margin-top: 40px;
+            padding: 16px 0 8px 0;
+        }
+        #particles-js {
+            position: fixed;
+            z-index: 0;
+            width: 100vw;
+            height: 100vh;
+            top: 0; left: 0;
+        }
+        .container, .footer { position: relative; z-index: 1; }
+        .pet-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+            margin-bottom: 32px;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.2s;
+            /* ペットカードをふわっと下からスライドイン */
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.9s cubic-bezier(.4,2,.4,1), transform 0.9s cubic-bezier(.4,2,.4,1);
+        }
+        .pet-card.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .pet-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.24);
+        }
+        .pet-deco {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.15;
+            z-index: 1; /* ← デコレーションは画像の下に */
+        }
+        .deco1 {
+            width: 60%;
+            height: 60%;
+            top: -20%;
+            left: -10%;
+            background: linear-gradient(45deg, #1976d2, #64b5f6);
+        }
+        .deco2 {
+            width: 40%;
+            height: 40%;
+            bottom: -10%;
+            right: -10%;
+            background: linear-gradient(45deg, #b39ddb, #f48fb1);
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 18px 4vw 18px 4vw;
+                margin: 24px 0 16px 0;
+            }
+            h1 {
+                font-size: 1.4rem;
+            }
+            .btn-group {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .btn {
+                min-width: 0;
+                font-size: 1rem;
+                padding: 14px 0;
+                width: 100%;
+                box-sizing: border-box;
+                margin: 0 auto;
+                border-radius: 24px;
+                flex: none; /* ← これを追加 */
+            }
+            .pet-info {
+                font-size: 0.98rem;
+            }
+            .pet-photo {
+                width: 120px;
+                height: 120px;
+            }
+            .pet-card {
+                margin-bottom: 24px;
+            }
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="container">
+        <div class="bg-deco">
+            <span class="deco1"></span>
+            <span class="deco2"></span>
+            <span class="deco3"></span>
+            <span class="deco4"></span>
+            <span class="deco5"></span>
+            <span class="deco6"></span>
+            <i class="star" style="position:absolute;">★</i>
+            <i class="star2" style="position:absolute;">★</i>
+        </div>
+        <div class="btn-group">
+            <a class="btn" href="基本スペック.html">基本スペック</a>
+            <a class="btn" href="自己紹介.html">自己紹介</a>
+            <a class="btn" href="趣味・特技.html">趣味・特技</a>
+            <a class="btn" href="index.html"
+               style="background:linear-gradient(90deg,#43cea2 60%,#185a9d 100%); font-size:1.1rem; padding:18px 0;">
+                メインページへ
+            </a>
+        </div>
+        <br>
+        <h1>飼っているペット</h1>
+        <br>
+        <!-- 犬その１ -->
+        <div class="pet-card">
+            <img src="dog.jpg/20250518_104708000_iOS.jpg" alt="犬その１の写真" class="pet-photo">
+            <div class="pet-deco deco1"></div>
+            <div class="pet-deco deco2"></div>
+            <ul class="pet-info">
+                <h2>犬その１</h2>
+                <li><strong>種類：</strong>ミニチュアダックスフンド</li>
+                <li><strong>名前：</strong>あずき</li>
+                <li><strong>性格：</strong>とても元気な女の子。</li>
+                <li><strong>特徴：</strong><br>短い足と眉毛がチャームポイント。<br>ソファの占有面積が大きい。</li>
+            </ul>
+        </div>
+        <!-- 犬その２ -->
+        <div class="pet-card">
+            <img src="dog.jpg/20250518_104624000_iOS.jpg" alt="犬その２の写真" class="pet-photo">
+            <div class="pet-deco deco1"></div>
+            <div class="pet-deco deco2"></div>
+            <ul class="pet-info">
+                <h2>犬その２</h2>
+                <li><strong>種類：</strong>ロングコートチワワ</li>
+                <li><strong>名前：</strong>こむぎ</li>
+                <li><strong>性格：</strong>たぶん中におじさんが入っている。男の子。</li>
+                <li><strong>特徴：</strong><br>腰巾着みたいな性格。<br>いつも何か訴えるような目つきをしている。</li>
+            </ul>
+        </div>
+        <p>ダックスとチワワの2匹を飼っています。<br>
+        どちらも我が家の癒し要因として頑張っております。</p>
+    </div>
+    <footer class="footer">
+        <p>© 2025 増山 樹 | ご覧いただきありがとうございます。<br>
+        このサイトは単位認定試験で高評価を得ることを目的としています。</p>
+        <p><a href="#top">サイトTOPへ</a></p>
+    </footer>
+    <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 40 },
+        "size": { "value": 4 },
+        "color": { "value": "#90caf9" },
+        "move": { "speed": 1 },
+        "opacity": { "value": 0.5 }
+      }
+    });
+    </script>
+    <script>
+window.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.pet-card');
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+                obs.unobserve(entry.target); // 一度表示したら監視をやめる
+            }
+        });
+    }, {
+        threshold: 0.2 // 20%見えたら発火
+    });
+    cards.forEach(card => observer.observe(card));
+});
+</script>
+</body>
+</html>

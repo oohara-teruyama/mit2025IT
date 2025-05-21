@@ -1,0 +1,458 @@
+@charset "uth-8";
+
+/* サイト全体の基本の文字色を設定する */
+ body {
+    margin: 0;
+    padding: 0;
+    color: #003300;
+ }
+/* /サイト全体の基本の文字色を設定する */
+
+/* リンクの基本色を決める */
+ a { color: #339933; }
+ a:visited { color: #99cc99; }
+/* /リンクの基本色を決める */
+
+/* マウスポインタを乗せたときの色を決める */
+ a:hover {
+    color: #006600;
+    font-weight: bold;
+    text-decoration: none;
+ }
+ a:hover img { opacity: 0.7; }
+/* /マウスポインタを乗せたときの色を決める */
+
+/* 見出しの上マージンを0にする */
+ h1, h2, h3 { margin-top: 0; }
+/* /見出しの上マージンを0にする */
+
+/* 段落の初期マージンと行間を調整する */
+ p {
+    margin-top: 0;
+    line-height: 1.6;
+ }
+/* /段落の初期マージンと行間を調整する */
+
+/* 画像の初期の縦位置を調整する(画像下の余白を消す) */
+ img { vertical-align: bottom; }
+/* /画像の初期の縦位置を調整する(画像下の余白を消す) */
+
+/* 共通部分のh1要素を装飾する */
+ #main h1 {
+    font-size: 30px;
+    padding: 15px 15px 15px 25px;
+    background: linear-gradient(to right, #ccffcc 0%, #fff 100%);
+ }
+/* /共通部分のh1要素を装飾する */
+
+/* 共通部分のh2要素を装飾する */
+ #main h2 {
+    font-size: 22px;
+    border-bottom: 5px solid #ccffcc;
+    padding: 11px 22px;
+ }
+/* /共通部分のh2要素を装飾する */
+
+/* 共通部分のh3要素を装飾する */
+ #main h3 {
+    float: left;
+    font-size: 18px;
+    border-left: solid 5px #006600;
+    padding: 4px 9px 4px 12px;
+    margin: 30px 380px 10px 0;
+ }
+/* /共通部分のh3要素を装飾する */
+
+/* 共通部分のリード要素を装飾する */
+ .lead {
+  margin-left: 1em;
+ }
+/* /共通部分のリード要素を装飾する */
+
+/* ヘッダーの幅を決める */
+ header {
+    width: 980px;
+    margin: 0 auto;
+ }
+/* /ヘッダーの幅を決める */
+
+/* メインビジュアルの体裁を整える */
+/* /メインビジュアルの体裁を整える */
+
+/* グローバルナビゲーションの基本枠を作る */
+ #global_navi {
+    width: 980px;
+    clear: both;
+    overflow: hidden;
+    margin: 16px auto;
+ }
+/* /グローバルナビゲーションの基本枠を作る */
+
+/* リストの行頭アイコンを消す */
+ #global_navi ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+ }
+/* /リストの行頭アイコンを消す */
+
+/* リストを横並びにする */
+ #global_navi ul li {
+   width: 244px;
+   float: left;
+   margin-right: 1px;
+   text-align: center;
+ }
+/* /リストを横並びにする */
+
+/* ナビゲーションのデザインを整える */
+ #global_navi ul li a {
+   display: block;
+   padding: 16px;
+   background-color: #003300;
+   color: #fff;
+   text-decoration: none;
+   transition: background-color 0.2s linear;
+ }
+/* /ナビゲーションのデザインを整える */
+
+/* 現在地の部分の色を変える */
+ #global_navi ul li.current a {
+   background-color: #005900;
+ }
+/* /現在地の部分の色を変える */
+
+/* マウスポインタを乗せたときに色が変わるようにする */
+ #global_navi ul li a:hover {
+   background-color: #339933;
+ }
+/* /マウスポインタを乗せたときに色が変わるようにする */
+
+/* メイン全体の基本枠を作る */
+ #wrapper {
+   width: 980px;
+   margin: 0 auto;
+   overflow: hidden;
+ }
+/* /メイン全体の基本枠を作る */
+
+/* フッターの基本枠を作る */
+ footer {
+   background-color: #001900;
+   text-align: center;
+ }
+/* /フッターの基本枠を作る */
+
+/* フッターナビゲーションの背景色と余白を設定する */
+ footer #footer_nav {
+   background-color: #e5ffe5;
+   padding: 10px 0;
+ }
+/* /フッターナビゲーションの背景色と余白を設定する */
+
+/* リストの行頭アイコンを消す */
+ footer #footer_nav ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+ }
+/* /リストの行頭アイコンを消す */
+
+/* リストを横並びにする */
+ footer #footer_nav li {
+   display: inline;
+   border-left: solid 1px #99cc99;
+   margin-left: 15px;
+   padding-left: 15px;
+   font-size: smaller;
+ }
+/* /リストを横並びにする */
+
+/* 最後の項目に右のボーダーを追加する */
+ footer #footer_nav li:last-child {
+   border-right: solid 1px #99cc99;
+   padding: 0 8px;
+ }
+/* /最後の項目に右のボーダーを追加する */
+
+/* コピーライトを整える */
+ footer small {
+   display: block;
+   padding: 4px 0;
+   color: #fff;
+ }
+/* /コピーライトを整える */
+
+/* パンくずリスト内の文字を小さくする */
+ #breadcrumb { font-size: smaller;}
+/* /パンくずリスト内の文字を小さくする */
+
+/* 行頭の数字を消す */
+ #breadcrumb ol {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+ }
+/* /行頭の数字を消す */
+
+/* リスト項目を横並びにする */
+ #breadcrumb ol li { display: inline; }
+/* /リスト項目を横並びにする */
+
+/* テキストの右側に「＞」を付ける */
+ #breadcrumb ol li::after {
+   content: ">";
+   padding-left: 7px;
+ }
+/* /テキストの右側に「＞」を付ける */
+
+/* 最後の項目の「＞」を消す */
+ #breadcrumb ol li:last-child::after { content: none;}
+/* /最後の項目の「＞」を消す */
+
+/* パンくずリストの体裁を整える */
+ #breadcrumb {
+   margin-bottom: 15px;
+ }
+/* /パンくずリストの体裁を整える */
+
+/* 「はじめに」セクションの体裁を整える */
+ #first p {
+  margin: 0 0 30px 16px;
+ }
+/* /「はじめに」セクションの体裁を整える */
+
+/* プロフィールアイコンを調整する */
+ #profile figure img {
+   width: 200px;
+   height: 200px;
+   border: solid 3px #001900;
+   border-radius: 100px;
+ }
+ #profile figure {
+   float: left;
+   margin: 0 18px 0 22px;
+ }
+/* /プロフィールアイコンを調整する */
+
+/* キャプションの書式を整える */
+ #profile figcaption {
+   font-size: 14px;
+   color: #696969;
+   text-align: center;
+   margin-bottom: 16px;
+ }
+/* /キャプションの書式を整える */
+
+/* プロフィールの枠を整える */
+ #profile table {
+  width: 72%;
+  border-collapse: collapse;
+  margin-top: 20px;
+ }
+/* /プロフィールの枠を整える */
+
+/* プロフィールの罫線を設定する */
+ #profile th,
+ #profile td {
+  border: 1px solid #006600;
+  padding: 8px;
+ }
+/* /プロフィールの罫線を設定する */
+
+/* プロフィールの見出しを装飾する */
+ #profile th,
+ #game th,
+ #book th {
+  background-color: #ccffcc;
+  text-align: center;
+  width: 5em;
+ }
+/* /プロフィールの見出しを装飾する */
+
+/* ゲームページの行頭アイコンを消す */
+ #game li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+ }
+/* /ゲームページの行頭アイコンを消す */
+
+/* ゲームページの画像を装飾する */
+ #game img {
+  width: 280px;
+  margin: 0 60px 30px 60px;
+  padding: 0;
+  border: solid 2px #001900;
+  border-radius: 85px;
+  box-shadow: 3px 3px 5px #696969;
+ }
+/* /ゲームページの画像を装飾する */
+
+/* 表の枠を整える */
+ #game table {
+  width: 50%;
+  border-collapse: collapse;
+  margin: 0 0 60px 0;
+ }
+/* /表の枠を整える */
+
+/* 表の罫線を設定する */
+ #game th,
+ #game td {
+  border: 1px solid #006600;
+  padding: 8px;
+ }
+/* /表の罫線を設定する */
+
+/* 表を装飾する */
+ #game th {
+  text-align: center;
+  width: 5em;
+ }
+/* /表を装飾する */
+
+/* ブックページの行頭アイコンを消す */
+ #book li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+ }
+/* /ブックページの行頭アイコンを消す */
+
+/* ブックページの画像を装飾する */
+ #book img {
+  margin: 20px 60px 5px 60px;
+  padding: 0;
+  border: solid 2px #001900;
+  box-shadow: 3px 3px 5px #696969;
+  margin-bottom: 10px;
+ }
+/* /ブックページの画像を装飾する */
+
+/* 表の枠を整える */
+ #book table {
+  width: 50%;
+  border-collapse: collapse;
+  margin: 0 0 100px 0;
+ }
+/* /表の枠を整える */
+
+/* 表の罫線を設定する */
+ #book th,
+ #book td {
+  border: 1px solid #006600;
+  padding: 8px;
+ }
+/* /表の罫線を設定する */
+
+/* 表を装飾する */
+ #book th {
+  text-align: center;
+  width: 5em;
+ }
+/* /表を装飾する */
+
+/* h3の位置を調整する */
+ #book h3 {
+  float: left;
+  margin-top: 60px;
+ }
+/* /h3の位置を調整する */
+
+/* 音楽ページの行頭アイコンを消す */
+ #music li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+ }
+/* /音楽ページの行頭アイコンを消す */
+
+/* 音楽ページの画像を装飾する */
+ #music img {
+  width: 280px;
+  margin: 20px 15px 0 0;
+  padding: 0;
+  border: solid 3px #001900;
+  box-shadow: 2px 2px 3px #696969;
+ }
+/* /音楽ページの画像を装飾する */
+
+/* 音楽ページのキャプションを装飾する */
+ #music ul li {
+  float: left;
+  text-align: center;
+  font-size: 14px;
+  color: #001900;
+  font-weight: bold;
+  margin-bottom: 30px;
+ }
+/* /音楽ページのキャプションを装飾する */
+
+/* 3の倍数のボックスの右マージンをカットする */
+ #music ul li:nth-child(3n) {
+  margin-right: 0;
+ }
+/* /3の倍数のボックスの右マージンをカットする */
+
+/* @mediaルールを記述する */
+ @media screen and (max-width : 767px){
+  img {
+    max-width: 100%;
+  }
+  header,
+  #global_navi,
+  #wrapper{
+    width: 100%;
+  }
+  #global_navi ul li {
+    width: 50%;
+    padding: 0.5px;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  #global_navi ul li a {
+    margin: 0;
+  }
+  #main {
+    width: 100%;
+    padding: 0 5%;
+    box-sizing: border-box;
+  }
+  #main figure {
+    text-align: center;
+  }
+  #profile figure {
+    float: none;
+  }
+  #profile table {
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+  #game img {
+    float: none;
+    margin: 0 0 11px 30px;
+  }
+  #game h3,
+  #game table {
+    width: 100%;
+  }
+  #book img {
+    float: none;
+    margin-left: 30px;
+  }
+  #book h3 {
+    margin-top: 11px;
+  }
+  #book table {
+    margin-bottom: 30px;
+  }
+  #book h3,
+  #book table {
+    width: 100%;
+  }
+  #music li {
+    float: none;
+    margin-left: -10px;
+  }
+ }

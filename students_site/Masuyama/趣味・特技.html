@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>趣味・特技</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png/ｍ.png" type="image/x-icon">
+    <style>
+        @keyframes gradientBG {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+        body {
+            font-family: 'Segoe UI', 'Meiryo', 'Yu Gothic', sans-serif;
+            background: linear-gradient(-45deg, #e3e6ef 0%, #cfd8dc 40%, #b0bec5 70%, #b39ddb 100%);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 520px;
+            margin: 60px auto 40px auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+            padding: 40px 28px 32px 28px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0 0 24px 0;
+            color: #1976d2;
+            font-size: 2.1rem;
+            letter-spacing: 0.05em;
+            border-bottom: 2px solid #90caf9;
+            display: inline-block;
+            padding-bottom: 6px;
+        }
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 18px;
+            margin-bottom: 32px;
+        }
+        .btn {
+            font-family: 'k-Font', 'Segoe UI', 'Meiryo', 'Yu Gothic', sans-serif;
+            background: linear-gradient(90deg, #1976d2 60%, #64b5f6 100%);
+            color: #fff;
+            border: none;
+            padding: 18px 0;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            margin: 0;
+            min-width: 140px;
+            flex: 1 1 140px;
+            box-sizing: border-box;
+            box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+            font-weight: bold;
+            letter-spacing: 0.05em;
+            text-align: center;
+            display: block;
+        }
+        .btn:hover, .btn:focus {
+            background: linear-gradient(90deg, #1565c0 60%, #42a5f5 100%);
+            transform: translateY(-2px) scale(1.04);
+            box-shadow: 0 4px 16px rgba(25, 118, 210, 0.18);
+        }
+        .hobby-list {
+            text-align: left;
+            margin: 0 auto 18px auto;
+            font-size: 1.08rem;
+            line-height: 2.1;
+            display: table;
+        }
+        .hobby-list li {
+            margin-bottom: 8px;
+            padding-left: 0.5em;
+        }
+        .footer {
+            text-align: center;
+            color: #888;
+            font-size: 0.95em;
+            margin-top: 40px;
+            padding: 16px 0 8px 0;
+        }
+        #particles-js {
+            position: fixed;
+            z-index: 0;
+            width: 100vw;
+            height: 100vh;
+            top: 0; left: 0;
+        }
+        .container, .footer { position: relative; z-index: 1; }
+        @media (max-width: 600px) {
+            .container {
+                padding: 12px 2vw;
+                margin: 16px 0 8px 0;
+                max-width: 100vw;
+            }
+            h1 {
+                font-size: 1.2rem;
+            }
+            .btn-group {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .btn {
+                min-width: 0;
+                font-size: 1rem;
+                padding: 12px 0;
+                width: 100%;
+                box-sizing: border-box;
+                margin: 0 auto;
+                border-radius: 24px;
+                flex: none; /* ← これを追加 */
+            }
+            .hobby-list {
+                font-size: 0.98rem;
+            }
+            /* 画像とテキストボックスを縦並びに */
+            .hobby-list div[style*="display:flex"] {
+                flex-direction: column !important;
+                align-items: stretch !important;
+                gap: 8px !important;
+                margin: 12px 0 !important;
+            }
+            .hobby-list img {
+                width: 100% !important;
+                height: auto !important;
+                max-width: 320px;
+                margin: 0 auto 8px auto !important;
+                left: 0 !important;
+                right: 0 !important;
+                position: static !important;
+                display: block;
+            }
+            .hobby-list p {
+                min-width: 0 !important;
+                left: 0 !important;
+                right: 0 !important;
+                position: static !important;
+                font-size: 0.98rem !important;
+                padding: 10px 6px !important;
+                margin: 0 auto 8px auto !important;
+                width: 100% !important;
+                box-sizing: border-box;
+            }
+        }
+        /* 白背景のcontainerにカラフルな丸や星を散りばめてにぎやかに */
+        .bg-deco {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .bg-deco span, .bg-deco i {
+            position: absolute;
+            opacity: 0.18;
+            filter: blur(0.5px);
+            animation: deco-float 8s infinite alternate;
+        }
+        .bg-deco .deco1 { width: 48px; height: 48px; background: #f8bbd0; top: 24px; left: 32px; border-radius: 50%; animation-delay: 0s;}
+        .bg-deco .deco2 { width: 32px; height: 32px; background: #b2dfdb; top: 80px; right: 40px; border-radius: 50%; animation-delay: 1s;}
+        .bg-deco .deco3 { width: 24px; height: 24px; background: #fff59d; bottom: 60px; left: 60px; border-radius: 50%; animation-delay: 2s;}
+        .bg-deco .deco4 { width: 36px; height: 36px; background: #90caf9; bottom: 40px; right: 40px; border-radius: 50%; animation-delay: 3s;}
+        .bg-deco .deco5 { width: 28px; height: 28px; background: #ce93d8; top: 50%; left: 10px; border-radius: 50%; animation-delay: 1.5s;}
+        .bg-deco .deco6 { width: 20px; height: 20px; background: #ffccbc; bottom: 20px; right: 20%; border-radius: 50%; animation-delay: 2.5s;}
+        /* 星型デコ */
+        .bg-deco .star {
+            width: 32px; height: 32px;
+            color: #ffd700;
+            top: 20%; right: 18%;
+            opacity: 0.22;
+            font-size: 2rem;
+            animation-delay: 1.2s;
+        }
+        .bg-deco .star2 {
+            width: 24px; height: 24px;
+            color: #f48fb1;
+            bottom: 18%; left: 12%;
+            opacity: 0.18;
+            font-size: 1.5rem;
+            animation-delay: 2.7s;
+        }
+        @keyframes deco-float {
+            0% { transform: translateY(0);}
+            100% { transform: translateY(-16px);}
+        }
+        .container {
+            position: relative;
+            z-index: 1;
+        }
+        /* 各趣味・特技項目をふわっと下からスライドイン */
+        .hobby-fadein {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.9s cubic-bezier(.4,2,.4,1), transform 0.9s cubic-bezier(.4,2,.4,1);
+        }
+        .hobby-fadein.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="container">
+        <div class="bg-deco">
+            <span class="deco1"></span>
+            <span class="deco2"></span>
+            <span class="deco3"></span>
+            <span class="deco4"></span>
+            <span class="deco5"></span>
+            <span class="deco6"></span>
+            <i class="star" style="position:absolute;">★</i>
+            <i class="star2" style="position:absolute;">★</i>
+        </div>
+        <div class="btn-group">
+            <a class="btn" href="基本スペック.html">基本スペック</a>
+            <a class="btn" href="自己紹介.html">自己紹介</a>
+            <a class="btn" href="飼っているペット.html">飼っているペット</a>
+            <a class="btn" href="index.html"
+               style="background:linear-gradient(90deg,#43cea2 60%,#185a9d 100%); font-size:1.1rem; padding:18px 0;">
+                メインページへ
+            </a>
+        </div>
+        <br>
+        <h1>趣味・特技</h1>
+        <br>
+        <ul class="hobby-list">
+            <li class="hobby-fadein"><strong>趣味その１：ゲーム</strong></li>
+            <div class="hobby-fadein" style="display:flex; align-items:center; justify-content:center; margin:24px 0; position:relative;">
+                <img src="game&anime.jpg/ogp_Convert to JPG_Convert to JPG.jpg"
+                     alt="画像1"
+                     style="height:160px; border-radius:12px; margin-right:36px; box-shadow:0 2px 8px rgba(25,118,210,0.10); position:relative; left:-300px; z-index:2;">
+                <p style="margin:0 auto; font-size:1.08rem; background:rgba(255,255,255,0.95); padding:12px 24px; border-radius:10px; position:relative; left: -300px; z-index:3; text-align:center; min-width:350px;">
+                    特にローグライク、格闘系が好きです。<br>
+                    <br>というかやり込めればそれでいいです。
+                </p>
+            </div><br>
+            <li class="hobby-fadein"><strong>趣味その２：アニメ</strong></li>
+            <div class="hobby-fadein" style="display:flex; align-items:flex-start; justify-content:flex-start; gap:24px; margin-bottom:18px;">
+                <p style="margin:1; font-size:1.08rem; flex:1; min-width:300px;">
+                    <br>ゆるーいのが好きです。<br>
+                    <br>なんかオススメがあるなら教えてください。
+                </p>
+                <img src="game&anime.jpg/20221024_cinemayurucamp_img01-scaled_Convert to JPG.jpg"
+                     alt="画像2"
+                     style="height:220px; width:220px; border-radius:12px; box-shadow:0 2px 8px rgba(25,118,210,0.10); flex-shrink:0; position:relative; right:20px;">
+            </div>
+            <li class="hobby-fadein"><strong>趣味その３：読書</strong></li>
+            <div class="hobby-fadein" style="display:flex; align-items:center; justify-content:center; margin:24px 0; position:relative;">
+                <img src="game&anime.jpg/vlakcq7n_Convert to JPG.jpg"
+                     alt="画像3"
+                     style="height:160px; border-radius:12px; margin-right:36px; box-shadow:0 2px 8px rgba(25,118,210,0.10); position:relative; left:-190px; z-index:2;">
+                <p style="margin:0; font-size:1.08rem; background:rgba(255,255,255,0.95); padding:12px 24px; border-radius:10px; position:relative; left: -230px; z-index:3; text-align:center; min-width:350px;">
+                    <br>大体小説、漫画よりも時間がつぶせるのでね。<br>
+                    <br>アニメ同様、何かオススメがあれば教えてください。
+                </p>
+            </div><br>
+            <li class="hobby-fadein"><strong>特技：ペーパークラフト及び展開図の作成</strong></li>
+            <div class="hobby-fadein" style="display:flex; align-items:flex-start; justify-content:flex-start; gap:24px; margin-bottom:18px;">
+                <p style="margin:1; font-size:1.08rem; flex:1; min-width:300px;">
+                    <br>中学生ぐらいのころに作ったやつ<br>
+                    <br>画用紙、ハサミ、のり、定規があればそれなりのはできます。
+                </p>
+                <img src="game&anime.jpg/20250428_161335000_iOS_Convert to JPG.jpg"
+                     alt="画像4"
+                     style="height:220px; width:220px; border-radius:12px; box-shadow:0 2px 8px rgba(25,118,210,0.10); flex-shrink:0; position:relative; right:20px;">
+            </div>
+            <li class="hobby-fadein"><strong>最近ハマっていること</strong><br>環境音ASMR、おいしいもの巡り（自宅内）<br>
+                <span style="font-size:0.85em; color:#888;">更新しないWebサイトに最近の情報を載せる意味はあるのでしょうか…</span></li>
+        </ul>
+    </div>
+    <footer class="footer">
+        <p>© 2025 増山 樹 | ご覧いただきありがとうございます。<br>
+        このサイトは単位認定試験で高評価を得ることを目的としています。</p>
+        <p><a href="#top">サイトTOPへ</a></p>
+    </footer>
+    <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 40 },
+        "size": { "value": 4 },
+        "color": { "value": "#90caf9" },
+        "move": { "speed": 1 },
+        "opacity": { "value": 0.5 }
+      }
+    });
+    </script>
+    <script>
+window.addEventListener('DOMContentLoaded', function() {
+    const items = document.querySelectorAll('.hobby-fadein');
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+                obs.unobserve(entry.target); // 一度表示したら監視をやめる
+            }
+        });
+    }, {
+        threshold: 0.2 // 20%見えたら発火
+    });
+    items.forEach(el => observer.observe(el));
+});
+</script>
+</body>
+</html>

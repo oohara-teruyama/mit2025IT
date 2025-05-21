@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>基本スペック</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png/ｍ.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Meiryo', 'Yu Gothic', sans-serif;
+            background: linear-gradient(-45deg, #e3e6ef 0%, #cfd8dc 40%, #b0bec5 70%, #b39ddb 100%);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        @keyframes gradientBG {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+        .container {
+            max-width: 520px;
+            margin: 60px auto 40px auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+            padding: 40px 28px 32px 28px;
+            text-align: center;
+            position: relative; /* 追加：装飾を重ねるため */
+            z-index: 1;
+        }
+        h1 {
+            margin: 0 0 24px 0;
+            color: #1976d2;
+            font-size: 2.1rem;
+            letter-spacing: 0.05em;
+            border-bottom: 2px solid #90caf9;
+            display: inline-block;
+            padding-bottom: 6px;
+        }
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 18px;
+            margin-bottom: 32px;
+        }
+        .btn {
+            font-family: 'k-Font', 'Segoe UI', 'Meiryo', 'Yu Gothic', sans-serif;
+            background: linear-gradient(90deg, #1976d2 60%, #64b5f6 100%);
+            color: #fff;
+            border: none;
+            padding: 18px 0;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            margin: 0;
+            min-width: 140px;
+            flex: 1 1 140px;
+            box-sizing: border-box;
+            box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+            font-weight: bold;
+            letter-spacing: 0.05em;
+            text-align: center;
+            display: block;
+        }
+        .btn:hover, .btn:focus {
+            background: linear-gradient(90deg, #1565c0 60%, #42a5f5 100%);
+            transform: translateY(-2px) scale(1.04);
+            box-shadow: 0 4px 16px rgba(25, 118, 210, 0.18);
+        }
+        .spec-list {
+            text-align: left;
+            display: table;
+            margin: 0 auto 16px auto;
+            font-size: 1.08rem;
+            line-height: 2.1;
+        }
+        .spec-list li {
+            margin-bottom: 8px;
+            padding-left: 0.5em;
+        }
+        .spec-list a {
+            color: #1976d2;
+            text-decoration: underline;
+            word-break: break-all;
+        }
+        .footer {
+            text-align: center;
+            color: #888;
+            font-size: 0.95em;
+            margin-top: 40px;
+            padding: 16px 0 8px 0;
+        }
+        #particles-js {
+            position: fixed;
+            z-index: 0;
+            width: 100vw;
+            height: 100vh;
+            top: 0; left: 0;
+        }
+        .container, .footer { position: relative; z-index: 1; }
+        @media (max-width: 600px) {
+            .container {
+                padding: 18px 4vw 18px 4vw;
+                margin: 24px 0 16px 0;
+            }
+            h1 {
+                font-size: 1.4rem;
+            }
+            .btn-group {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .btn {
+                min-width: 0;
+                font-size: 1rem;
+                padding: 14px 0;
+                width: 100%;
+                box-sizing: border-box;
+                margin: 0 auto;
+                border-radius: 24px;
+                flex: none; /* ← これを追加 */
+            }
+            .spec-list {
+                font-size: 0.98rem;
+            }
+        }
+        .bg-deco {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .bg-deco span {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.18;
+            filter: blur(1px);
+            animation: deco-float 8s infinite alternate;
+        }
+        .bg-deco .deco1 { width: 60px; height: 60px; background: #f8bbd0; top: 30px; left: 40px; animation-delay: 0s;}
+        .bg-deco .deco2 { width: 40px; height: 40px; background: #b2dfdb; top: 120px; right: 60px; animation-delay: 1s;}
+        .bg-deco .deco3 { width: 32px; height: 32px; background: #fff59d; bottom: 60px; left: 60px; animation-delay: 2s;}
+        .bg-deco .deco4 { width: 48px; height: 48px; background: #90caf9; bottom: 40px; right: 40px; animation-delay: 3s;}
+        .bg-deco .deco5 { width: 36px; height: 36px; background: #ce93d8; top: 50%; left: 10px; animation-delay: 1.5s;}
+        .bg-deco .deco6 { width: 28px; height: 28px; background: #ffccbc; bottom: 20px; right: 20%; animation-delay: 2.5s;}
+        @keyframes deco-float {
+            0% { transform: translateY(0);}
+            100% { transform: translateY(-18px);}
+        }
+        /* CSS: フェードイン用クラスを追加 */
+        .fadein {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s cubic-bezier(.4,2,.4,1), transform 1s cubic-bezier(.4,2,.4,1);
+        }
+        .fadein.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="container">
+        <div class="bg-deco">
+            <span class="deco1"></span>
+            <span class="deco2"></span>
+            <span class="deco3"></span>
+            <span class="deco4"></span>
+            <span class="deco5"></span>
+            <span class="deco6"></span>
+        </div>
+        <div class="btn-group">
+            <a class="btn" href="自己紹介.html">自己紹介</a>
+            <a class="btn" href="趣味・特技.html">趣味・特技</a>
+            <a class="btn" href="飼っているペット.html">飼っているペット</a>
+            <a class="btn" href="index.html"
+               style="background:linear-gradient(90deg,#43cea2 60%,#185a9d 100%); font-size:1.1rem; padding:18px 0;">
+                メインページへ
+            </a>
+        </div>
+        <br>
+        <h1 class="fadein">基本スペック</h1>
+        <br>
+        <!-- 段落ごとにfadeinクラスを付与 -->
+        <ul class="spec-list">
+            <li class="fadein"><strong>名前：</strong>増山 樹</li>
+            <li class="fadein"><strong>年齢：</strong>18歳（2025年現在）</li>
+            <li class="fadein"><strong>出身：</strong>茨城県 水戸市</li>
+            <li class="fadein"><strong>誕生日：</strong>2008年 8月 24日</li>
+            <li class="fadein"><strong>血液型：</strong>不明（自分が知りたい）</li>
+            <li class="fadein"><strong>身長・体重：</strong>170cm / 56.5kg</li>
+            <li class="fadein">
+                <strong>性格：</strong>
+                MBTI診断でいう「INTJ-T型（建築家）」<br>
+                <span style="font-size:0.97em;">わかりやすく言うと、自己批判的で内向的な性格だそうです。</span><br>
+                <span style="font-size:0.9em; color:#000000;">詳しい詳細はこちらからどうぞ</span><br>
+                <span style="font-size:0.85em;"><a href="https://metalife.co.jp/business-words/2098/" target="_blank" rel="noopener">INTJ（建築家）はどんな性格？特徴や相性のいい人を解説！｜MBTI診断</a></span>
+            </li>
+            <li class="fadein">
+                <strong>職業・活動：</strong><br>
+                一般学生（水戸情報ITクリエイター専門学校）<br>バイト経験はなし。
+            </li>
+        </ul>
+    </div>
+    <footer class="footer">
+        <p>© 2025 増山 樹 | ご覧いただきありがとうございます。<br>
+                    このサイトは単位認定試験で高評価を得ることを目的としています。</p>
+        <p><a href="#top">サイトTOPへ</a></p>
+    </footer>
+    <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 40 },
+        "size": { "value": 4 },
+        "color": { "value": "#90caf9" },
+        "move": { "speed": 1 },
+        "opacity": { "value": 0.5 }
+      }
+    });
+    </script>
+    <!-- 段落ごとに順番にフェードイン -->
+    <script>
+    window.addEventListener('DOMContentLoaded', function() {
+        const items = document.querySelectorAll('.fadein');
+        items.forEach((el, i) => {
+            setTimeout(() => {
+                el.classList.add('show');
+            }, 100 * i);
+        });
+    });
+    </script>
+</body>
+</html>
