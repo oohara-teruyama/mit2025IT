@@ -1,0 +1,121 @@
+/* 全体のスタイル */
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* ヘッダー */
+header {
+    background: linear-gradient(135deg, #4A90E2, #9013FE);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+/* パンくずリスト */
+nav.breadcrumb {
+    background-color: #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+nav.breadcrumb ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav.breadcrumb ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav.breadcrumb ul li a {
+    text-decoration: none;
+    color: #4A90E2;
+    font-weight: bold;
+}
+
+nav.breadcrumb ul li a:hover {
+    text-decoration: underline;
+}
+
+/* メインコンテンツ */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* セクションタイトル */
+h2 {
+    border-bottom: 3px solid #4A90E2;
+    padding-bottom: 8px;
+    font-size: 1.5em;
+}
+
+/* リスト */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 8px 0;
+    font-size: 1.2em;
+}
+
+/* 画像のスタイル */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 15px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ホバーエフェクト */
+section:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+@media screen and (max-width : 767px) {
+    img {
+        max-width: 100%;
+    }    
+    header,
+    #sidebar
+    #wrapper{
+        width: 100%;
+    }
+}
+header h1 {
+    float: none;
+    text-align: center;
+}
+header h1 img {
+    width: 50%;
+}
+header #header_contact {
+    display: none;
+}
+  #main {
+    width: 100%;
+    padding: 0.5%;
+    box-sizing: border-box;
+  }
+  #main figure {
+   text-align: center;
+  }
+  #main visual {
+   width: 100%;
+   height: auto; 
+  }
