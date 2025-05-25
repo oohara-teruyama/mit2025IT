@@ -1,0 +1,324 @@
+/* 基本スタイル */
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    line-height: 1.6; /* 行間を調整して読みやすく */
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #f4ebda;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    box-sizing: border-box; /* paddingを含めて幅を計算 */
+}
+
+/* ヘッダー */
+header {
+    background-color: #a6b5a5;
+    color: white;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+header h1 {
+    font-size: 2em; /* デフォルトのh1より少し小さめに */
+    margin-bottom: 15px;
+}
+
+/* ナビゲーション */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* 中央揃え */
+    flex-wrap: wrap; /* 画面が狭くなったら折り返す */
+    gap: 15px; /* 要素間の隙間を調整 */
+    margin-top: 15px;
+}
+
+nav ul li {
+    display: inline-block; /* インラインブロックに変更 */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px; /* パディングを調整 */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap; /* テキストが途中で改行されないように */
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* ホバー時の背景色を少し透明に */
+}
+
+.current {
+    border-bottom: 2px solid #fff;
+    font-weight: bold;
+}
+
+/* プロフィールセクション */
+.profile-wrapper {
+    display: flex;
+    flex-direction: column; /* 縦並びをデフォルトに */
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* 要素間の隙間を調整 */
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.profile-card img {
+    width: 150px; /* スマホ向けに少し小さく */
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #a6b5a5; /* ボーダーを追加 */
+}
+
+.pinfo {
+    text-align: center; /* プロフィール情報のテキストを中央揃え */
+}
+
+.pinfo h2 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+.pinfo .title {
+    font-size: 1.1em;
+    color: #262724;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* 基本情報セクション */
+.info {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: left; /* テキストを左寄せに */
+}
+
+.info h2 {
+    font-size: 1.6em;
+    color: #4a4a4a;
+    border-bottom: 2px solid #a6b5a5;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    text-align: center; /* 見出しは中央揃え */
+}
+
+.info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info ul li {
+    font-size: 1em;
+    padding: 8px 0;
+    border-bottom: 1px dotted #e0e0e0; /* 区切り線を追加 */
+}
+
+.info ul li:last-child {
+    border-bottom: none;
+}
+
+/* ポートフォリオ（現状ではコメントアウト部分も含むため、一般的なスタイルとして） */
+.portfolio {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.project-item {
+    background: #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    flex: 1 1 calc(50% - 30px); /* 2列表示、スマホでは1列 */
+    max-width: 300px; /* 最大幅を設定 */
+}
+
+/* 記憶（memory）セクションのスタイル */
+.memory1, .memory2, .memory3, .memory4 {
+    display: flex;
+    flex-direction: column; /* スマホでは縦並びに */
+    align-items: center; /* 中央揃え */
+    gap: 20px;
+    background-color: #fff;
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: left; /* テキストを左寄せに */
+}
+
+.memory1 h1, .memory2 h1, .memory3 h1, .memory4 h1{
+    font-size: 1.5em; /* スマホ向けに小さく */
+    color: #4a4a4a;
+    border-bottom: 2px solid #a6b5a5;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    text-align: center; /* 見出しは中央揃え */
+    width: 100%; /* 全幅を使う */
+}
+
+.memory1 p, .memory2 p, .memory3 p, .memory4 p {
+    font-size: 1em; /* スマホ向けに小さく */
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.custom-image {
+    width: 180px; /* スマホ向けに調整 */
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 10px auto; /* 中央揃え */
+    display: block; /* ブロック要素にして中央寄せ */
+}
+
+/* フッター */
+footer {
+    width: 100%;
+    background-color: #a6b5a5;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 0 0 10px 10px;
+    box-sizing: border-box;
+}
+
+/* メディアクエリ: 768px以上の画面幅 */
+@media (min-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    nav ul {
+        gap: 40px; /* PCでは広めに */
+    }
+
+    nav a {
+        padding: 10px 20px;
+    }
+
+    .profile-wrapper {
+        flex-direction: row; /* PCでは横並び */
+        text-align: left; /* テキストを左寄せ */
+    }
+
+    .profile-card img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .pinfo {
+        text-align: left;
+    }
+
+    .info h2 {
+        text-align: left;
+    }
+
+    .memory1, .memory2, .memory3, .memory4 {
+        flex-direction: row; /* PCでは横並びに */
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .memory1 h1, .memory2 h1, .memory3 h1, .memory4 h1 {
+        font-size: 22px;
+        text-align: left;
+    }
+
+    .custom-image {
+        width: 200px;
+        height: 200px;
+        margin: 0; /* float解除 */
+        float: left; /* 元のfloat設定 */
+    }
+}
+
+/* メディアクエリ: 480px以下の画面幅（さらに小さいスマホ向け） */
+@media (max-width: 480px) {
+    .container {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav a {
+        padding: 6px 10px;
+        font-size: 0.9em;
+    }
+
+    .profile-card img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .pinfo h2 {
+        font-size: 1.5em;
+    }
+
+    .pinfo .title {
+        font-size: 1em;
+    }
+
+    .info h2 {
+        font-size: 1.4em;
+    }
+
+    .info ul li {
+        font-size: 0.95em;
+    }
+
+    .memory1 h1, .memory2 h1, .memory3 h1, .memory4 h1 {
+        font-size: 1.3em;
+    }
+
+    .custom-image {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* その他、必要に応じて調整 */
+/* aikon クラスのスタイルは、具体的な用途が不明なため一般的な調整 */
+.aikon {
+    width: 100px; /* スマホ向けに小さく */
+    height: 100px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 10px auto;
+    display: block;
+}
