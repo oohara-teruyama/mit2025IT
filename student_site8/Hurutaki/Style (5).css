@@ -1,0 +1,243 @@
+body {
+    font-family: 'Noto Sans JP', sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* 日本語と欧文のバランスが良いフォント */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8; /* 非常に明るいオフホワイト/ライトブルー */
+    color: #333; /* 落ち着いた濃いグレーで読みやすく */
+    line-height: 1.6; /* 行の高さを広げて読みやすく */
+}
+
+header {
+    background-color: #2c3e50; /* ダークネイビー/チャコールグレー (落ち着いたベースカラー) */
+    color: #e0f2f7; /* 明るいオフホワイト */
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* やや強めの影で立体感を出す */
+}
+
+header h1 {
+    margin-bottom: 8px;
+    font-size: 3em; /* メインタイトルを大きく */
+    font-weight: 700; /* 太字 */
+    letter-spacing: 1px; /* 少し字間を広げる */
+}
+
+header p {
+    font-size: 1.2em;
+    opacity: 0.9; /* 少し透明度を下げて、h1を引き立てる */
+}
+
+main {
+    padding: 30px;
+    max-width: 1000px; /* コンテンツ幅を制限し、中央寄せで見やすく */
+    margin: 30px auto;
+    background-color: #ffffff; /* メインコンテンツエリアは白 */
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 40px; /* セクション間の余白 */
+    padding: 25px;
+    border-radius: 10px; /* 角丸 */
+    background-color: #ffffff; /* 各セクションの背景も白に統一 */
+    border: 1px solid #e0e0e0; /* 薄い境界線で区切りを出す */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* 控えめな影 */
+}
+
+section h2 {
+    font-size: 2.5em;
+    color: #e67e22; /* ゲームらしいオレンジ（アクセントカラー1）*/
+    border-bottom: 3px solid #f39c12; /* アクセントカラー1の濃い目で下線 */
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    text-align: center; /* 中央揃えにしてもOK */
+}
+
+section h3 {
+    font-size: 1.8em;
+    color: #3498db; /* ゲームらしいブルー（アクセントカラー2）*/
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-left: 5px solid #3498db; /* 左側にライン */
+    padding-left: 10px;
+}
+
+section p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+section ul {
+    list-style: none; /* デフォルトのリストスタイルを無効に */
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+section li {
+    margin-bottom: 10px;
+    padding-left: 30px; /* アイコン分のスペース */
+    position: relative;
+    font-size: 1.05em;
+    color: #444;
+}
+
+/* リストアイコンのスタイル (今回はゲームコントローラー) */
+section li::before {
+    content: '🎮'; /* ゲームコントローラーの絵文字 */
+    color: #2ecc71; /* 緑（アクセントカラー3） */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.3em;
+    line-height: 1.2;
+}
+
+/* リンクのスタイル */
+a {
+    color: #e74c3c; /* 鮮やかな赤（インタラクティブな要素） */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #c0392b;
+}
+
+/* ページ戻るリンクボタン */
+main > p > a {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 12px 25px;
+    background-color: #555; /* 落ち着いたグレーのボタン */
+    color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+main > p > a:hover {
+    background-color: #333;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #2c3e50; /* ヘッダーと同じダークネイビー */
+    color: #aeb6bf; /* 明るいグレー */
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ==================== ゲームセクション固有のスタイル ==================== */
+#hobby-game {
+    background-color: #fefefe; /* ほぼ白でクリーンに */
+    border: 2px solid #e67e22; /* ゲームセクションのメインカラーを枠線に */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* 少し強めの影 */
+}
+
+#hobby-game h2 {
+    color: #e67e22; /* オレンジ */
+    border-bottom-color: #e67e22; /* 下線もオレンジ */
+}
+
+#hobby-game h3 {
+    color: #3498db; /* ブルー */
+}
+
+#hobby-game ul li::before {
+    content: '🎮'; /* ゲームコントローラー */
+    color: #2ecc71; /* 緑 */
+}
+
+/* ==================== YouTube視聴セクション固有のスタイル (以前の赤ベース) ==================== */
+#hobby-youtube {
+    background-color: #fefefe;
+    border: 2px solid #ff0000; /* YouTubeレッドの枠線 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+#hobby-youtube h2 {
+    color: #ff0000;
+    border-bottom-color: #ff0000;
+}
+#hobby-youtube h3 {
+    color: #a020f0; /* 少し紫がかった色 */
+}
+#hobby-youtube ul li::before {
+    content: '▶';
+    color: #ff0000;
+}
+
+
+/* ==================== 音楽鑑賞セクション固有のスタイル (追加) ==================== */
+#hobby-music {
+    background-color: #fefefe;
+    border: 2px solid #9b59b6; /* 紫系の枠線 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+#hobby-music h2 {
+    color: #9b59b6; /* 紫 */
+    border-bottom-color: #9b59b6;
+}
+#hobby-music h3 {
+    color: #27ae60; /* 緑系の見出し */
+}
+#hobby-music ul li::before {
+    content: '🎵'; /* 音符の絵文字 */
+    color: #9b59b6;
+}
+
+
+/* ==================== レスポンシブ対応 ==================== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+    header p {
+        font-size: 1em;
+    }
+    main {
+        padding: 20px;
+        margin: 20px auto;
+    }
+    section {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+    section h2 {
+        font-size: 2em;
+    }
+    section h3 {
+        font-size: 1.5em;
+    }
+    section li {
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    main {
+        padding: 15px;
+        margin: 15px auto;
+    }
+    section h2 {
+        font-size: 1.8em;
+    }
+    section h3 {
+        font-size: 1.3em;
+    }
+    section li {
+        padding-left: 25px;
+    }
+    section li::before {
+        font-size: 1.1em;
+    }
+}

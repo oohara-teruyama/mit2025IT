@@ -1,0 +1,236 @@
+body {
+    font-family: 'YouTube Sans', 'Noto Sans JP', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* 背景色を少し落ち着かせ、深い夜のステージのような雰囲気に */
+    background-color: #f0f0f0;
+    color: #333;
+    /* オプション：背景に微細なノイズやテクスチャを加え、質感を高める */
+    /* background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWJsZW5jZSB0eXBlPSJmcmFjdGFhbE5vaXNlIiBiYXNlRnJlcXVlbmN5PSIwLjc1IiBudW1PY3RhdmVzPSIyIiBzdGl0Y2hUaWxlcz0ibm9pc2UiLz48cHJlc2VydmVBbHBoYS8+PGZlQ29sb3JNYXRyaXggdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAgMCAwIDAgMSAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCIgLz48ZmVDb21wb3NpdGUgaW49IlNvdXJjZUFscGhhIiBpbjI9ImEiIG9wZXJhdG9yPSJpbiIgcmVzdWx0PSJhIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzIyMiIgZmlsdGVyPSJ1cmwoI24pIiBvcGFjaXR5PSIwLjMiLz48L3N2Zz4='); */
+    /* background-blend-mode: multiply; */
+}
+
+header {
+    background-color:#FFD700;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    /* 影を強調し、より存在感のあるヘッダーに */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative; /* 擬似要素のための基準 */
+    overflow: hidden; /* はみ出すコンテンツを隠す */
+}
+
+/* ヘッダーに音楽の波紋や光が広がるような効果 */
+header::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%; /* 広がる光の範囲 */
+    height: 150%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* クリックイベントを妨げない */
+    z-index: 0;
+    /* オプション：光が脈動するアニメーション */
+    /* animation: header-pulse 4s infinite alternate ease-in-out; */
+}
+
+/* @keyframes header-pulse {
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 0.15; }
+    100% { transform: translate(-50%, -50%) scale(1.05); opacity: 0.2; }
+} */
+
+header h1 {
+    margin-bottom: 5px;
+    font-size: 2.8em; /* 少し大きくしてインパクトを出す */
+    letter-spacing: -0.5px; /* 文字間を詰めて洗練された印象に */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* 立体感と深みを出す影 */
+    position: relative;
+    z-index: 1; /* 光より前面に */
+}
+
+main {
+    padding: 20px;
+    max-width: 960px;
+    margin: 20px auto;
+}
+
+section {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 25px; /* パディングを少し増やしてゆとりを持たせる */
+    border-radius: 15px; /* 角をさらに丸くして柔らかい印象に */
+    /* 影を強めて、コンテンツが浮き上がるような効果 */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    border: none; /* ボーダーをなくし、影で境界線を表現 */
+    position: relative;
+    overflow: hidden; /* 内部の影がはみ出さないように */
+}
+
+/* セクションの背景に、音の揺らぎのような微細なグラデーションの影 */
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: radial-gradient(circle at top left, rgba(0, 0, 0, 0.03) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+
+section h2 {
+    border-bottom: 3px solid #ff0000;
+    padding-bottom: 12px; /* 少し広げてバランスを整える */
+    margin-bottom: 25px; /* 下のマージンを増やして見出しと本文の間隔を確保 */
+    color: #222; /* より濃い色にして視認性を高める */
+    font-size: 2.2em; /* 少し大きくして重要性を強調 */
+    font-weight: bold;
+    letter-spacing: -0.5px;
+}
+
+section h3 {
+    margin-top: 30px; /* 上のマージンを増やして区切りを明確に */
+    margin-bottom: 12px;
+    color: #444; /* 少し濃い色にして読みやすく */
+    font-size: 1.4em; /* 少し大きく */
+    font-weight: 600; /* 適度な太さ */
+}
+
+section p {
+    line-height: 1.8; /* 行間を広げて読みやすさを向上 */
+    margin-bottom: 18px;
+}
+
+section ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+section li {
+    margin-bottom: 10px;
+    padding-left: 30px; /* アイコン分のスペースを確保 */
+    position: relative;
+    font-size: 1.1em; /* 少し大きくして見やすく */
+}
+
+section li::before {
+    content: '♬'; /* ▶から「♪」（音符）に変更し、音楽サイトらしさを強調 */
+    color: #ff0000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.4em; /* 音符を少し大きくしてアクセントに */
+    line-height: 1;
+    transform: translateY(-2px); /* 垂直位置を微調整 */
+}
+
+a {
+    color: #ff0000; /* リンク色をYouTubeの赤に統一 */
+    text-decoration: none;
+    transition: all 0.3s ease; /* すべてのプロパティにトランジションを適用 */
+}
+
+a:hover {
+    color: #cc0000; /* ホバーで少し暗く */
+    text-decoration: underline;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.3); /* ほのかなグロウ効果 */
+}
+
+main > p > a {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 12px 25px; /* パディングを増やしてボタンの存在感を出す */
+    background-color: #ff0000;
+    color: #fff;
+    border-radius: 8px; /* 角を丸く */
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3); /* ボタンに影を追加 */
+}
+
+main > p > a:hover {
+    background-color: #cc0000;
+    transform: translateY(-2px); /* ホバー時に少し浮き上がるようなアニメーション */
+    box-shadow: 0 6px 12px rgba(255, 0, 0, 0.5); /* ホバー時に影を強調 */
+    text-decoration: none;
+}
+
+#hobby-youtube {
+    /* YouTubeセクションに特別な背景と影で強調 */
+    background: linear-gradient(to right, #ffffff, #fdfdff);
+    border: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* より強い影で特別感を演出 */
+    position: relative;
+    overflow: hidden;
+}
+
+/* YouTubeセクションの右上に大きな再生ボタンアイコンを重ねる */
+#hobby-youtube::after {
+    content: '\25B6'; /* ▶のUnicode */
+    font-family: 'Arial Black', sans-serif;
+    color: rgba(255, 0, 0, 0.08); /* 薄い赤で背景のアクセントに */
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 180px;
+    transform: rotate(15deg);
+    pointer-events: none;
+    z-index: 0;
+}
+
+#hobby-youtube h2 {
+    color: #ff0000;
+    border-bottom-color: #ff0000;
+}
+
+#hobby-youtube ul li a {
+    color: #ff0000;
+    font-weight: bold;
+    padding: 5px 8px;
+    border-radius: 4px;
+    background-color: rgba(255, 0, 0, 0.05); /* 薄い赤の背景でリンクを強調 */
+    display: inline-block; /* パディングと背景を適用するために必要 */
+}
+
+#hobby-youtube ul li a:hover {
+    color: #cc0000;
+    text-decoration: none;
+    background-color: rgba(255, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(255, 0, 0, 0.2);
+}
+
+
+/* ==================== フッター ==================== */
+footer {
+    background-color: #222; /* より深い色にして、落ち着いた印象に */
+    color: #999; /* 文字色も少し暗く */
+    text-align: center;
+    padding: 20px; /* パディングを増やしてゆとりを持たせる */
+    margin-top: 60px; /* 上のマージンを増やしてセクションとの間隔を確保 */
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2); /* 内側に影をつけ、安定感のあるデザインに */
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2em; /* モバイルでの視認性を考慮し調整 */
+    }
+    section h2 {
+        font-size: 1.9em;
+    }
+    main {
+        padding: 15px;
+    }
+    #hobby-youtube::after {
+        font-size: 120px; /* モバイルではアイコンを少し小さく */
+        top: -10px;
+        right: -10px;
+    }
+}
