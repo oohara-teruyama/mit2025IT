@@ -1,0 +1,103 @@
+<!doctype html> 
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>オススメボドゲ</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="shortcut icon" href="images/icon.ico">
+        <script src="js/dice.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <!-- ヘッダー -->
+        <header>
+          <h1>
+            <p id="top">オススメボドゲ紹介</p>
+          <nav id="global_navi">
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="hutari.html">二人用</a></li>
+              <li><a href="small.html">小型</a></li>
+              <li><a href="middle.html">中型</a></li>
+              <li><a href="big.html">大型</a></li>
+              <li class="current"><a href="kyouryoku.html">協力型</a></li>
+            </ul>
+          </nav>
+        </header>
+        <!-- /ヘッダー -->
+        
+        <!-- wrapper -->
+        <div id="wrapper">
+         <!-- メイン -->
+         <div id="main">
+          <div id="breadcrumb">
+            <ol>
+             <li><a href="index.html">HOME</a></li>
+             <li>協力型</li>
+            </ol>
+          </div>
+          <article>
+            <h2>協力型ボードゲーム</h2>
+            <p class="lead">プレイヤー全員で協力しながら一つの目標を目指すゲームです。<br>ワイワイやるにはもってこいの作品。</p>
+            <h3>ito</h3>
+            <p>
+              感覚共有ゲームです。比較的有名なので、Youtube等で見たことある人も多いのではないでしょうか。<br>
+              「無人島に持っていくもの」等のお題に対し、1ならばわら一本、100ならば自家用飛行機など、その数字を他人に連想してもらえるような例を出します。<br>
+              その後、小さい数字から出していくゲームです。
+            </p>
+            <h3>コードネーム</h3>
+            <p>
+              Youtube等でよく見るボードゲームその2です。
+              フィールドにあるカードそれぞれについて、連想できるようなお題と、連想させたい数をスパイマスターが宣言し、ほかのプレイヤーはそれが何かを考えながら開けていくゲームです。
+              2チーム対抗で行うため、人数が多ければワイワイ遊べるかと思います。
+            </p>
+            <h3>パンデミック</h3>
+            <p>
+              4つの病原体の感染拡大に対して、治療薬の開発や根絶を目指していくボードゲームです。<br>
+              衛生兵や科学者などの役職カードを活用して、事態の解決に向かいましょう。
+            </p>
+          </article>
+         </div>
+        <!-- /メイン -->
+          <!-- サイド -->
+           <aside id="sidebar">
+            <section id="side_banner">
+              <h2>関連リンク</h2>
+              <ul>
+                <li><a href="https://www.amazon.co.jp/s?k=%E3%83%9C%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0&crid=2BZVTN21BPILD&sprefix=bo-do%2Caps%2C172&ref=nb_sb_ss_ts-doa-p_1_5" target="blank"><img src="images/amazon.png" alt="Amazon"></a></li>
+                <li><a href="espace.html" target="_blank"><img src="images/espace.png" alt="ボードゲームカフェespace"></a></li>
+              </ul>
+             <nav id="dice">
+              <div>
+               <h2>ボドゲでたびたび使用するサイコロを振ってみるところ</h2>
+               <nav id="dice"></nav>
+             <p><input class="btn" type="button" value="サイコロ1個" onclick="getDice1();"></p>
+             <p><span id="condice1"></span></p>
+             <p><input class="btn" type="button" value="サイコロ2個" onclick="getDice2();"></p>
+             <p><span id="condice2"></span></p>
+               </nav>
+               </div>
+             </section>
+          </aside>
+         <!-- /サイド -->
+        </div>
+        <!-- /wrapper -->
+
+        <!-- フッター -->
+        <footer>
+          <div id="footer_nav">
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="hutari.html">二人用</a></li>
+              <li><a href="small.html">小型</a></li>
+              <li><a href="middle.html">中型</a></li>
+              <li><a href="big.html">大型</a></li>
+              <li><a href="kyouryoku.html">協力型</a></li>
+            </ul>
+          </div>
+          <small>&copy; 2025/05/26 阿部和歩.</small>
+        </footer>
+        <!-- /フッター --> 
+    </body>
+</html>

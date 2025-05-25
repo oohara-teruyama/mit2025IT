@@ -1,0 +1,110 @@
+<!doctype html> 
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>オススメボドゲ</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="shortcut icon" href="images/icon.ico">
+        <script src="js/dice.js" type="text/javascript"></script>
+        </script>
+    </head>
+    <body>
+        <!-- ヘッダー -->
+        <header>
+          <h1>
+            <p id="top">オススメボドゲ紹介</p>
+          <nav id="global_navi">
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="hutari.html">二人用</a></li>
+              <li><a href="small.html">小型</a></li>
+              <li class="current"><a href="middle.html">中型</a></li>
+              <li><a href="big.html">大型</a></li>
+              <li><a href="kyouryoku.html">協力型</a></li>
+            </ul>
+          </nav>
+        </header>
+        <!-- /ヘッダー -->
+        
+        <!-- wrapper -->
+        <div id="wrapper">
+         <!-- メイン -->
+         <div id="main">
+          <div id="breadcrumb">
+            <ol>
+             <li><a href="index.html">HOME</a></li>
+             <li><a href="middle.html">中型</a></li>
+             <li>ドミニオン</li>
+            </ol>
+          </div>
+          <article>
+            <h2>ドミニオン</h2>
+            <p class="lead">30分～1時間程度の時間で遊ぶことのできるゲームです。<br>アクションカードは1ゲームにつき10種類しか使わないため、ランダムに決めると、全く違った展開になる面白さがあります。</p>
+            <h3>基本</h3>
+            <p>
+              25種類のアクションカードと、財宝カード、勝利点カードが含まれたセットです。<br>
+              その中でも、4枚まで廃棄できる《礼拝堂》や、アクションカードの効果を二回分適応する《玉座の間》は、個人的にオススメのカードです
+            </p>
+            <h3>繁栄</h3>
+            <p>
+              より上位の勝利点カード、財宝カードが追加され、基本よりダイナミックに遊べる拡張セットです。<br>
+              仕掛けるタイミングなど、駆け引きがより楽しめるようになるかもしれません。
+            </p>
+            <h3>異郷</h3>
+            <p>
+              獲得時効果やコンボを楽しめるカードが追加されます。
+            </p>
+             <p a class="lead">and more...</p>
+            <p>
+              ご紹介した拡張セットは、ほんの一部にすぎません。<br>
+              このほかにも海辺など、様々な種類があります。<br>
+              個人的な好み等あるとは思いますので、良ければ調べてみてください。
+            </p>
+          </article>
+         </div>
+        <!-- /メイン -->
+          <!-- サイド -->
+          <aside id="sidebar">
+            <section id="side_banner">
+              <h2>関連リンク</h2>
+              <ul>
+                <li><a href="https://www.amazon.co.jp/s?k=%E3%83%9C%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0&crid=2BZVTN21BPILD&sprefix=bo-do%2Caps%2C172&ref=nb_sb_ss_ts-doa-p_1_5" target="blank"><img src="images/amazon.png" alt="Amazon"></a></li>
+                <li><a href="espace.html" target="_blank"><img src="images/espace.png" alt="ボードゲームカフェespace"></a></li>
+              </ul>
+
+           <div>
+              <h2>ボドゲでたびたび使用するサイコロを振ってみるところ</h2>
+              <nav id="dice"></nav>
+             <p><input class="btn" type="button" value="サイコロ1個" onclick="getDice1();"></p>
+             <p><span id="condice1"></span></p>
+             <p><input class="btn" type="button" value="サイコロ2個" onclick="getDice2();"></p>
+             <p><span id="condice2"></span></p>
+             </nav>
+            </div>
+          </section>
+          </aside>
+
+         <!-- /サイド -->
+
+        </div>
+        <!-- /wrapper -->
+
+        <!-- フッター -->
+        <footer>
+          <div id="footer_nav">
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="hutari.html">二人用</a></li>
+              <li><a href="small.html">小型</a></li>
+              <li><a href="middle.html">中型</a></li>
+              <li><a href="big.html">大型</a></li>
+              <li><a href="kyouryoku.html">協力型</a></li>
+            </ul>
+          </div>
+          <small>&copy; 2025/05/26 阿部和歩</small>
+        </footer>
+        <!-- /フッター --> 
+    </body>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html> 
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>オススメボドゲ</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="shortcut icon" href="images/icon.ico">
+        <script src="js/dice.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <!-- ヘッダー -->
+        <header>
+          <h1>
+            <p id="top">オススメボドゲ紹介</p>
+          <nav id="global_navi">
+            <ul>
+              <li class="current"><a href="index.html">HOME</a></li>
+              <li><a href="hutari.html">二人用</a></li>
+              <li><a href="small.html">小型</a></li>
+              <li><a href="middle.html">中型</a></li>
+              <li><a href="big.html">大型</a></li>
+              <li><a href="kyouryoku.html">協力型</a></li>
+            </ul>
+          </nav>
+        </header>
+        <!-- /ヘッダー -->
+        
+        <!-- wrapper -->
+        <div id="wrapper">
+         <!-- メイン -->
+         <div id="main">
+          <div id="breadcrumb">
+            <ol>
+             <li><a href="index.html">HOME</a></li>
+            </ol>
+          </div>
+          <article>
+            <h1>ボードゲーム</h1>
+            <p class="lead">
+              ボードゲームといえば、オセロや将棋、麻雀などが有名です。
+              <br>一方で、遊びにくさ、ルールがしられていないことなどが原因で遊ばれない数多くのボードゲームがあります。
+              <br>このページでは、それらのボードゲームを分類に分け、ご紹介していこうかと思います。興味がわいた作品がありましたら、是非チェックしてみて下さい。
+              </p><p id="bord"><img src="images/bord.jpg" alt="bordgame">
+
+            </p>
+            <h2>ボードゲームの魅力</h2>
+            <p>
+              ボードゲームの魅力とは、一言でいえば達成感です。
+              <br>他プレイヤーとの駆け引き、カードやさいころで何を引くかなどの運、
+              自身の経験からの適切な判断をうまく組み合わせ、勝利へと進めていく。
+              はたまた、ほかのプレイヤーとわいわい遊べる話のタネに。いろいろな理由でお勧めできるゲームです。
+              <br>また、攻略の定石はありますが、それが正解になるとは限らないため、常に考えていくことが大切になります。
+              <br>今回は紹介してはいませんが、一人用のボードゲームなどもあります。
+            </p>
+            <h2>何から遊べばいい？</h2>
+            <p>
+              最初のゲームとしては、サクッと楽しめる小型か、思考を巡らせることで達成感が得られやすい中型がおすすめです。<br>
+              その中でも、カタンやドミニオンはお勧めの作品なので、そちらから始めてみてはいかがでしょうか。<br>
+            </p>
+          </article>
+         </div>
+        <!-- /メイン -->
+          <!-- サイド -->
+          <aside id="sidebar">
+            <section id="side_banner">
+              <h2>関連リンク</h2>
+              <ul>
+                <li><a href="https://www.amazon.co.jp/s?k=%E3%83%9C%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0&crid=2BZVTN21BPILD&sprefix=bo-do%2Caps%2C172&ref=nb_sb_ss_ts-doa-p_1_5" target="blank"><img src="images/amazon.png" alt="Amazon"></a></li>
+                <li><a href="espace.html" target="_blank"><img src="images/espace.png" alt="ボードゲームカフェespace"></a></li>
+              </ul>
+
+
+           <div>
+              <h2>ダイスロールエリア</h2>
+             <nav id="dice">
+             <p><input class="btn" type="button" value="サイコロ1個" onclick="getDice1();"></p>
+             <p><span id="condice1"></span></p>
+             <p><input class="btn" type="button" value="サイコロ2個" onclick="getDice2();"></p>
+             <p><span id="condice2"></span></p>
+             </nav>
+            </div>
+            </section>
+           </aside>
+         <!-- /サイド -->
+        </div>
+        <!-- /wrapper -->
+
+        <!-- フッター -->
+        <footer>
+          <div id="footer_nav">
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="hutari.html">二人用</a></li>
+              <li><a href="small.html">小型</a></li>
+              <li><a href="middle.html">中型</a></li>
+              <li><a href="big.html">大型</a></li>
+              <li><a href="kyouryoku.html">協力型</a></li>
+            </ul>
+          </div>
+          <small>&copy; 2025/05/26 阿部和歩.</small>
+        </footer>
+        <!-- /フッター --> 
+    </body>
+</html>

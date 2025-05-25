@@ -1,0 +1,104 @@
+<!doctype html> 
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>オススメボドゲ</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="shortcut icon" href="images/icon.ico">
+        <script src="js/dice.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <!-- ヘッダー -->
+        <header>
+          <h1>
+            <p id="top">オススメボドゲ紹介</p>
+          <nav id="global_navi">
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="hutari.html">二人用</a></li>
+              <li class="current"><a href="small.html">小型</a></li>
+              <li><a href="middle.html">中型</a></li>
+              <li><a href="big.html">大型</a></li>
+              <li><a href="kyouryoku.html">協力型</a></li>
+            </ul>
+          </nav>
+        </header>
+        <!-- /ヘッダー -->
+        
+        <!-- wrapper -->
+        <div id="wrapper">
+         <!-- メイン -->
+         <div id="main">
+          <div id="breadcrumb">
+            <ol>
+             <li><a href="index.html">HOME</a></li>
+             <li>小型ボードゲーム</li>
+            </ol>
+          </div>
+          <article>
+            <h2>小型ボードゲーム</h2>
+            <p class="lead">30分未満程度で遊べるゲームです。そのため、ルールも比較的単純で、遊びやすいかと思います。</p>
+            <h3>たった今考えたプロポーズの言葉を君に捧ぐよ</h3>
+            <p>
+              ランダムに配られたカードを並べ、プロポーズの言葉を作りましょう。<br>
+              指輪を受け取ってくれたら勝ちです。<br>
+              どうか、変な言葉にならないことを祈っております。
+            </p>
+            <h3>海底探検</h3>
+            <p>
+              全員が呼吸のための酸素を共有しながら、お宝を探しに海へと潜り、生きて帰ってくるチキンレースゲームです。<br>
+              運に左右されますが、その分バランス感覚が要求されます。
+            </p>
+            <h3>テストプレイなんてしてないよ</h3>
+            <p>
+              究極のバカゲーです。<br>
+              勝利条件はいたって単純。カードの勝利条件を満たす、または他プレイヤーすべてが敗北することです。<br>
+              ただ、お気を付けを。一つ間違うだけで敗北しますので。
+            </p>
+          </article>
+         </div>
+        <!-- /メイン -->
+          <!-- サイド -->
+           <aside id="sidebar">
+            <section id="side_banner">
+              <h2>関連リンク</h2>
+              <ul>
+                <li><a href="https://www.amazon.co.jp/s?k=%E3%83%9C%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0&crid=2BZVTN21BPILD&sprefix=bo-do%2Caps%2C172&ref=nb_sb_ss_ts-doa-p_1_5" target="blank"><img src="images/amazon.png" alt="Amazon"></a></li>
+                <li><a href="espace.html" target="_blank"><img src="images/espace.png" alt="ボードゲームカフェespace"></a></li>
+              </ul>
+             <nav id="dice">
+              <div>
+               <h2>ボドゲでたびたび使用するサイコロを振ってみるところ</h2>
+               <nav id="dice"></nav>
+             <p><input class="btn" type="button" value="サイコロ1個" onclick="getDice1();"></p>
+             <p><span id="condice1"></span></p>
+             <p><input class="btn" type="button" value="サイコロ2個" onclick="getDice2();"></p>
+             <p><span id="condice2"></span></p>
+               </nav>
+               </div>
+             </section>
+          </aside>
+         <!-- /サイド -->
+
+        </div>
+        <!-- /wrapper -->
+
+        <!-- フッター -->
+        <footer>
+          <div id="footer_nav">
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="hutari.html">二人用</a></li>
+              <li><a href="small.html">小型</a></li>
+              <li><a href="middle.html">中型</a></li>
+              <li><a href="big.html">大型</a></li>
+              <li><a href="kyouryoku.html">協力型</a></li>
+            </ul>
+          </div>
+          <small>&copy; 2025/05/26 阿部和歩.</small>
+        </footer>
+        <!-- /フッター --> 
+    </body>
+</html>

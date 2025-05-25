@@ -1,0 +1,105 @@
+<!doctype html> 
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>オススメボドゲ</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="shortcut icon" href="images/icon.ico">
+        <script src="js/dice.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <!-- ヘッダー -->
+        <header>
+          <h1>
+            <p id="top">オススメボドゲ紹介</p>
+          <nav id="global_navi">
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li class="current"><a href="hutari.html">二人用</a></li>
+              <li><a href="small.html">小型</a></li>
+              <li><a href="middle.html">中型</a></li>
+              <li><a href="big.html">大型</a></li>
+              <li><a href="kyouryoku.html">協力型</a></li>
+            </ul>
+          </nav>
+        </header>
+        <!-- /ヘッダー -->
+        
+        <!-- wrapper -->
+        <div id="wrapper">
+         <!-- メイン -->
+         <div id="main">
+          <div id="breadcrumb">
+            <ol>
+             <li><a href="index.html">HOME</a></li>
+             <li>二人用</li>
+            </ol>
+          </div>
+          <article>
+            <h2>二人用ボードゲーム</h2>
+            <p class="lead">
+              1対1で遊ぶことを目的として作られたゲームの紹介ページです。<br>
+              コマを動かして遊ぶモノが多く、難易度は低い分、やりこみ要素は多いかと考えられます。<br>
+              照山先生が持ってきてくださっている立体四目並べもこの分類です。
+            </p>
+            <h3>ガイスター</h3>
+            <p>
+              青いコマと赤いコマの2種類4個を用いてコマを敵陣地へと進めていくゲームです。<br>
+              勝利条件は3つあり、それは自分の赤いコマがすべて相手にとられること、相手の青いコマをすべてとること、そして敵陣地への青いコマの到達です。
+              積極的に攻めてくるから取られるのを読んだ赤かな、などの心理戦が楽しめます。
+            </p>
+            <h3>ノッカノッカ</h3>
+            <p>
+              自身のコマを相手の陣地に到達させたら勝ちとなるゲームです。<br>
+              このゲームの特徴は、相手のコマに乗ることで、相手の動きを封じれることです。<br>
+              いかに相手の動きを封じ、自身を動けるようにしながら勝ちを手繰り寄せるかを楽しむ戦略性があります。
+            </p>
+
+          </article>
+         </div>
+        <!-- /メイン -->
+          <!-- サイド -->
+          <aside id="sidebar">
+            <section id="side_banner">
+              <h2>関連リンク</h2>
+              <ul>
+                <li><a href="https://www.amazon.co.jp/s?k=%E3%83%9C%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0&crid=2BZVTN21BPILD&sprefix=bo-do%2Caps%2C172&ref=nb_sb_ss_ts-doa-p_1_5" target="blank"><img src="images/amazon.png" alt="Amazon"></a></li>
+                <li><a href="espace.html" target="_blank"><img src="images/espace.png" alt="ボードゲームカフェespace"></a></li>
+              </ul>
+             <nav id="dice">
+              <div>
+               <h2>ボドゲでたびたび使用するサイコロを振ってみるところ</h2>
+               <nav id="dice"></nav>
+             <p><input class="btn" type="button" value="サイコロ1個" onclick="getDice1();"></p>
+             <p><span id="condice1"></span></p>
+             <p><input class="btn" type="button" value="サイコロ2個" onclick="getDice2();"></p>
+             <p><span id="condice2"></span></p>
+               </nav>
+               </div>
+             </section>
+          </aside>
+         <!-- /サイド -->
+
+
+        </div>
+        <!-- /wrapper -->
+
+        <!-- フッター -->
+        <footer>
+          <div id="footer_nav">
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="hutari.html">二人用</a></li>
+              <li><a href="small.html">小型</a></li>
+              <li><a href="middle.html">中型</a></li>
+              <li><a href="big.html">大型</a></li>
+              <li><a href="kyouryoku.html">協力型</a></li>
+            </ul>
+          </div>
+          <small>&copy; 2025/05/26 阿部和歩.</small>
+        </footer>
+        <!-- /フッター --> 
+    </body>
+</html>

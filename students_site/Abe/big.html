@@ -1,0 +1,100 @@
+<!doctype html> 
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>オススメボドゲ</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="shortcut icon" href="images/icon.ico">
+        <script src="js/dice.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <!-- ヘッダー -->
+        <header>
+          <h1>
+            <p id="top">オススメボドゲ紹介</p>
+          <nav id="global_navi">
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="hutari.html">二人用</a></li>
+              <li><a href="small.html">小型</a></li>
+              <li><a href="middle.html">中型</a></li>
+              <li class="current"><a href="big.html">大型</a></li>
+              <li><a href="kyouryoku.html">協力型</a></li>
+            </ul>
+          </nav>
+        </header>
+        <!-- /ヘッダー -->
+        
+        <!-- wrapper -->
+        <div id="wrapper">
+         <!-- メイン -->
+         <div id="main">
+          <div id="breadcrumb">
+            <ol>
+             <li><a href="index.html">HOME</a></li>
+             <li>大型</li>
+            </ol>
+          </div>
+          <article>
+            <h2>大型ボードゲーム</h2>
+            <p class="lead">60分以上の長時間をかけて遊ぶゲームです。難易度が高いものが多いですが、その分やりこみ要素が多いです。ボードゲームに慣れてきた皆さんにオススメしたいラインナップです。</p>
+            <h3>テラフォーミングマーズ</h3>
+            <p>
+              他プレイヤーと競いながら火星を開拓していくことを目標とするゲームです。
+              プレイヤーの所属する企業やカードが違うことにより、プレイするごとに全く違う展開になるところが楽しいゲームです。
+            </p>
+            <h3>アグリコラ</h3>
+            <p>
+              17世紀の牧場の家族が種まきや資材の収集、家の拡張など様々な行動をしながら、牧場の拡張をしていくゲームです。
+              手が足りなければ家族を人を増やすこともできますが、当然全員分の食料は必要になり、勝利点となる資材は減っていきます。
+              さらに、他プレイヤーのと同じ行動はできません。
+              そのようなジレンマと闘いながら、農場を発展させていくゲームです。
+            </p>
+          
+          </article>
+         </div>
+        <!-- /メイン -->
+          <!-- サイド -->
+           <aside id="sidebar">
+            <section id="side_banner">
+              <h2>関連リンク</h2>
+              <ul>
+                <li><a href="https://www.amazon.co.jp/s?k=%E3%83%9C%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0&crid=2BZVTN21BPILD&sprefix=bo-do%2Caps%2C172&ref=nb_sb_ss_ts-doa-p_1_5" target="blank"><img src="images/amazon.png" alt="Amazon"></a></li>
+                <li><a href="espace.html" target="_blank"><img src="images/espace.png" alt="ボードゲームカフェespace"></a></li>
+              </ul>
+             <nav id="dice">
+              <div>
+               <h2>ダイスロールエリア</h2>
+               <nav id="dice"></nav> 
+             <p><input class="btn" type="button" value="サイコロ1個" onclick="getDice1();"></p>
+             <p><span id="condice1"></span></p>
+             <p><input class="btn" type="button" value="サイコロ2個" onclick="getDice2();"></p>
+             <p><span id="condice2"></span></p>
+               </nav>
+               </div>
+             </section>
+          </aside>
+         <!-- /サイド -->
+
+        </div>
+        <!-- /wrapper -->
+
+        <!-- フッター -->
+        <footer>
+          <div id="footer_nav">
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="hutari.html">二人用</a></li>
+              <li><a href="small.html">小型</a></li>
+              <li><a href="middle.html">中型</a></li>
+              <li><a href="big.html">大型</a></li>
+              <li><a href="kyouryoku.html">協力型</a></li>
+            </ul>
+          </div>
+          <small>&copy; 2025/05/26 阿部和歩.</small>
+        </footer>
+        <!-- /フッター --> 
+    </body>
+</html>
