@@ -1,0 +1,295 @@
+/* 基本設定 */
+body {
+    font-family: 'メイリオ', Meiryo, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom; /* 画像の下にできる余白をなくす */
+}
+
+/* ヘッダー */
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    text-align: center; /* センター寄せ */
+}
+
+header h1 {
+    font-size: 28px;
+    margin: 0;
+    display: inline-block; /* ナビゲーションと並べるためにインラインブロックに */
+    vertical-align: middle;
+}
+
+header h1 a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* グローバルナビゲーション */
+#global_navi {
+    display: inline-block; /* h1と並べる */
+    vertical-align: middle;
+    margin-left: 20px; /* h1との間に余白 */
+}
+
+#global_navi ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#global_navi ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#global_navi ul li:last-child {
+    margin-right: 0;
+}
+
+#global_navi ul li a {
+    color: #555;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+#global_navi ul li a:hover,
+#global_navi ul li.current a {
+    color: #007bff;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+/* メインビジュアル */
+#main_visual {
+    width: 100%;
+    overflow: hidden; /* 親要素からはみ出た部分を非表示 */
+    margin-bottom: 30px;
+}
+
+#main_visual img {
+    display: block;
+    width: 100%; /* 親要素の幅に合わせて画像が広がるように */
+    height: auto;
+}
+
+/* wrapper */
+#wrapper {
+    max-width: 1000px; /* 最大幅を設定 */
+    margin: 0 auto; /* 中央寄せ */
+    padding: 0 20px;
+    display: flex; /* flexboxを使ってメインとサイドバーを横並びにする */
+    justify-content: space-between; /* 要素間のスペースを均等に */
+    flex-wrap: wrap; /* 要素が収まらない場合に折り返す */
+}
+
+/* メインコンテンツ */
+#main {
+    width: 68%; /* サイドバーとの比率 */
+    background-color: #fff;
+    padding: 30px;
+    box-sizing: border-box; /* paddingをwidthに含める */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+#main h2 {
+    font-size: 24px;
+    color: #007bff;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#main h3 {
+    font-size: 20px;
+    color: #555;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+#main p {
+    margin-bottom: 1em;
+}
+
+#point figure {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#point figure img {
+    max-width: 80%;
+    height: auto;
+    border: 1px solid #ddd;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+#point figcaption {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+#news dl {
+    margin-top: 20px;
+}
+
+#news dt {
+    font-weight: bold;
+    color: #007bff;
+    float: left; /* 日付を左寄せ */
+    width: 90px; /* 日付の幅 */
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+#news dd {
+    margin-bottom: 10px;
+    overflow: hidden; /* float解除 */
+}
+
+#news dd a {
+    color: #333;
+}
+
+/* サイドバー */
+#sidebar {
+    width: 28%; /* メインコンテンツとの比率 */
+    background-color: #fff;
+    padding: 30px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+#sidebar h2 {
+    font-size: 22px;
+    color: #007bff;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#side_contact address {
+    font-style: normal;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#side_contact address img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+#side_contact p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contact_button {
+    display: block;
+    width: 80%;
+    margin: 20px auto 0;
+    padding: 15px 0;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.contact_button:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+}
+
+/* フッター */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#footer_nav ul {
+    list-style: none;
+    margin: 0 0 15px 0;
+    padding: 0;
+}
+
+#footer_nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+#footer_nav ul li a {
+    color: #fff;
+    font-size: 14px;
+}
+
+#footer_nav ul li a:hover {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer small {
+    font-size: 12px;
+    display: block;
+}
+
+/* レスポンシブ対応 (簡易版) */
+@media screen and (max-width: 768px) {
+    #wrapper {
+        flex-direction: column; /* 縦並びにする */
+        padding: 0 15px;
+    }
+
+    #main,
+    #sidebar {
+        width: 100%; /* 幅を100%に */
+        padding: 20px;
+    }
+
+    header h1 {
+        display: block; /* 縦並びにする */
+        margin-bottom: 15px;
+    }
+
+    #global_navi {
+        display: block;
+        margin-left: 0;
+    }
+
+    #global_navi ul li {
+        margin-right: 10px;
+    }
+
+    #news dt {
+        float: none;
+        width: auto;
+        margin-right: 0;
+    }
+}
