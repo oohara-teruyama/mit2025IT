@@ -1,0 +1,240 @@
+@charset "utf-8";
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #77aaff 3px solid;
+}
+
+header h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+header p {
+    text-align: center;
+    margin: 0;
+}
+
+.profile img {
+    display: block;
+    margin: 10px auto;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+nav {
+    margin-top: 10px;
+    background: #444;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #77aaff;
+}
+
+section.game {
+    margin: 20px 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section.game h2 {
+    text-align: center;
+    color: #333;
+}
+
+section.game ul {
+    list-style: none;
+    padding: 0;
+}
+
+section.game ul li {
+    padding: 10px;
+    margin: 10px 0;
+    background: #f4f4f4;
+    border-left: 5px solid #77aaff;
+    cursor: pointer;
+}
+
+section.game ul li:hover {
+    background: #e4e4e4;
+}
+
+section.game ul li::before {
+    content: attr(data-title) " - " attr(data-description);
+    display: block;
+    font-size: 0.9em;
+    color: #666;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+footer ul {
+    padding: 0;
+    list-style: none;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color: #77aaff;
+}
+
+footer small {
+    display: block;
+    margin-top: 10px;
+}
+
+        /* プロフィールセクション */
+        section.profile {
+            margin: 20px 0;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile h2 {
+            border-left: 5px solid #77aaff;
+            padding-left: 10px;
+            font-size: 1.4em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .profile ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .profile li {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 1.5em;
+        }
+
+        .profile li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #77aaff;
+        }
+
+        .profile .personality li {
+            font-style: italic;
+            color: #666;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+
+        footer ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        footer ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        footer ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer ul li a:hover {
+            color: #77aaff;
+        }
+
+        footer small {
+            display: block;
+            margin-top: 10px;
+        }
+
+        /* レスポンシブ対応 */
+        @media (max-width: 600px) {
+            .container {
+                width: 95%;
+            }
+
+            .profile h2 {
+                font-size: 1.2em;
+            }
+
+            .profile li {
+                font-size: 0.95em;
+            }
+        }
+
+        /* スマホ対応 */
+@media (max-width : 767px){
+  img {
+    max-width: 100%;
+  }
+  header,
+  #nav,
+  #body{
+    width: 100%;
+  }
+}
