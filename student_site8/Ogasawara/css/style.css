@@ -1,0 +1,248 @@
+/* リセットCSS（シンプル版） */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background: url("../images/im.png") no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #000;
+  line-height: 1.6;
+  text-align: center;
+}
+
+header {
+  background: rgba(26, 115, 232, 0.8);
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  color: #fff;
+}
+
+header::before {
+  display: none;
+}
+
+header img {
+  height: 60px;
+  transition: transform 0.3s ease-in-out;
+  display: block;
+  margin: 0 auto;
+}
+
+header img:hover {
+  transform: scale(1.05);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  z-index: 1001;
+}
+
+.hamburger span {
+  height: 4px;
+  width: 25px;
+  background: #fff;
+  margin: 4px 0;
+  transition: all 0.4s ease;
+  border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  transition: max-height 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  transition: background 0.3s, transform 0.2s;
+}
+
+nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+  color: #ffeb3b;
+}
+
+#main_visual img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  object-fit: cover;
+  animation: fadeIn 2s ease-in;
+}
+
+#main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: #ffffffee;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  animation: slideUp 1s ease-out;
+  color: #000;
+  text-align: center;
+}
+
+#point img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin: 1rem auto;
+  display: block;
+  animation: fadeIn 1.5s ease-in;
+}
+
+footer {
+  background-color: rgba(255, 64, 129, 0.8);
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  backdrop-filter: blur(5px);
+}
+
+footer a {
+  color: #fff;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+  display: block;
+  margin: 0 auto;
+}
+
+.slider img:hover {
+  transform: scale(1.02);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  nav {
+    max-height: 0;
+    flex-direction: column;
+  }
+
+  nav.active {
+    max-height: 500px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  nav ul li a {
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+
+  #main {
+    padding: 1.2rem;
+    margin: 1rem;
+  }
+
+  h1, h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  #point img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  footer ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+body {
+  background: url("../images/ou.jpg") no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #rgba(0,0,0,0.1); /* テキストが見やすいように白に変更 */
+}
+

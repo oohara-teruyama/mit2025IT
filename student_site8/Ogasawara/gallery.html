@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+   <head>
+    <meta charset="UTF-8">
+    <title>趣味</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/a.png">
+  </head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+<script type="text/javascript">
+        $(document).ready(function(){
+            $('.slider').bxSlider({
+                auto: true,
+                pause: 5000, // 画像がスライドするスピード
+                slideWidth: 400, // 画像の横幅
+            });
+        });
+</script>
+
+  <body>
+
+    <!--ヘッダー-->
+    <header>
+      <h1><a href="index.html"><img src="images/image.png" alt="プロフィール"></a></h1>
+      <ul>
+         <li class="current"><a href="index.html">ホーム</a></li>
+         <li><a href="course.html">私の名前、詳しい情報について</a></li>
+         <li><a href="gallery.html">趣味</a></li>
+         <li><a href="assess.html">これからの目標</a></li>
+        </ul>
+    </header>
+     <!--/ヘッダー-->
+
+     <!--メイン-->
+     <div id="main">
+                <div id="breadcrumb">
+                    <ol>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li>趣味</li>
+                    </ol>
+                </div>
+                <article>
+                    <h1>趣味</h1>
+                    <p class="lead">私の趣味はたくさんあります。</p>
+                    <p>PowerPointの時にも言いましたがディズニーに行くことと車と<br>
+                        ゲームをすること、ギターを弾くことですが特にディズニーに<br>
+                        行くことが自分の中の趣味にあたる。</p>
+                    <section id="gallery">
+                    <h2>下の画像は好きなこと、もの</h2>
+                    <div class="slider">
+                      <img src="images/d.png" alt="仮面ライダー">
+                      <img src="images/ant.jpg" alt="アンティルドーン">
+                      <img src="images/kamen.jpg" alt="ディズニー">
+              </div>
+
+    <!--フッダー-->
+    <footer>
+      <div id="footer_nav">
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="course.html">私の名前、詳しい情報など</a></li>
+          <li><a href="gallery.html">趣味</a></li>
+          <li><a href="assess.html">これからの目標</a></li>
+         
+        </ul>
+      </div>
+      <small>&copy; 2025 ogasawaraカンパニー.</small>
+    </footer>
+    <!--/フッダー-->
+
+  </body>
+</html>

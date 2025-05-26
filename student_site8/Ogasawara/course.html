@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+   <head>
+    <meta charset="UTF-8">
+    <title>詳しい情報</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/a.png">
+
+  </head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+<script type="text/javascript">
+        $(document).ready(function(){
+            $('.slider').bxSlider({
+                auto: true,
+                pause: 5000, // 画像がスライドするスピード
+                slideWidth: 400, // 画像の横幅
+            });
+        });
+</script>
+
+  <body>
+
+    <!--ヘッダー-->
+    <header>
+      <h1><a href="index.html"><img src="images/image.png" alt="プロフィール"></a></h1>
+      <ul>
+         <li class="current"><a href="index.html">ホーム</a></li>
+         <li><a href="course.html">私の名前、詳しい情報について</a></li>
+         <li><a href="gallery.html">趣味</a></li>
+         <li><a href="assess.html">これからの目標</a></li>
+         
+        </ul>
+    </header>
+     <!--/ヘッダー-->
+
+
+
+  <!--メイン-->
+<div id="main">
+  <section id="point">
+    <h1>このページを書いた小笠原です</h1>
+    <section>
+       <figure>
+        <img src="images/a.png" alt="俺">
+        <figcaption>（私のアイコン）</figcaption>
+      </figure>
+      <p>では私の詳しい情報について話していきます。名前は小笠原です<br>
+      現在は水戸市に住んでいますがもともと水戸、日立、水戸という形で3回引っ越している<br>
+    年齢18歳。高校は水戸啓明高校。今まではテキトーに暮らしていたがもう少しでひとり暮らしするため焦っている。</p>
+    </section>
+    <!--フッダー-->
+    <footer>
+      <div id="footer_nav">
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="course.html">私の名前、詳しい情報など</a></li>
+          <li><a href="gallery.html">趣味</a></li>
+          <li><a href="assess.html">これからの目標</a></li>
+          
+        </ul>
+      </div>
+      <small>&copy; 2025 ogasawaraカンパニー.</small>
+    </footer>
+    <!--/フッダー-->
+
+  </body>
+</html>
