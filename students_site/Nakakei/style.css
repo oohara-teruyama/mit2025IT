@@ -1,0 +1,46 @@
+@charset "UTF-8";
+header {
+    text-align: center;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center; /* 縦方向中央揃え */
+    padding: 10px 20px;
+    background-color: #0b6d9b;
+    color: white;
+    .header h1, .header a {
+    color: white; /* 文字を白く */
+    text-decoration: none;
+    transition: opacity 0.3s ease-in-out; /* なめらかな変化 */
+}
+header li,
+footer a{
+    color: white;
+}
+
+.header a:hover {
+    opacity: 0.6; /* ホバー時に薄くする */
+}
+}
+footer #footer_nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+footer {
+    background-color: black;
+    text-align: center;
+}
+footer #footer_nav ul {
+    display: inline;
+    border-left: solid 1px #aaa;
+    margin-left: 10px;
+    font-size: smaller;
+}
+#side_banner .murata {
+  width: 300px;
+  height: auto;
+}
+
+#AI{
+    width: 980px;
+}
