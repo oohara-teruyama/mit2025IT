@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎮 好きなゲーム・漫画 - Hiroto's Favorites</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Press+Start+2P&family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="自己紹介css/hiroto.css" />
+</head>
+    <style>
+        .page-container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(255, 68, 68, 0.2);
+        }
+
+        h1 {
+            font-family: 'Creepster', cursive;
+            font-size: 3.5rem;
+            color: #ffcc00;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            text-align: center;
+            margin-bottom: 40px;
+            letter-spacing: 0.15em;
+        }
+
+        section {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 40px;
+            border: 2px solid #8B0000;
+            box-shadow: 0 0 10px rgba(255, 68, 68, 0.1);
+        }
+
+        /* 好きなゲームセクション専用のスタイルを追加 */
+        #game-section { /* IDを追加したので、HTMLのsectionタグにもid="game-section"を追加してください */
+            position: relative; /* 背景画像の配置基準 */
+            overflow: hidden; /* 背景画像がはみ出さないように */
+            padding-right: 250px; /* 画像の分、右に余白を開ける */
+            background-image: url('自己紹介css/100.jpg'); /* 100.jpgを背景画像として設定 */
+            background-repeat: no-repeat;
+            background-size: contain; /* 画像全体が表示されるように調整 */
+            background-position: right center; /* 右端中央に配置 */
+            background-color: rgba(0, 0, 0, 0.8); /* セクション自体の背景色を少し濃くして、画像の上に文字が読めるように */
+        }
+        
+        #game-section h2 {
+            position: relative; /* テキストを画像の上に表示するため */
+            z-index: 2; /* 背景画像より手前に表示 */
+        }
+
+        #game-section ul {
+            position: relative; /* テキストを画像の上に表示するため */
+            z-index: 2; /* 背景画像より手前に表示 */
+            /* 必要であればリストの幅を調整して、画像と重ならないように */
+            width: 70%; /* 例: セクションの幅の70%を使う */
+        }
+
+
+        section h2 {
+            font-family: 'Creepster', cursive;
+            font-size: 2.5rem;
+            color: #ff4444;
+            text-shadow: 1px 1px 3px black;
+            margin-bottom: 20px;
+            text-align: center;
+            letter-spacing: 0.1em;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .page-link {
+            display: block;
+            width: fit-content;
+            margin: 50px auto 30px auto;
+            padding: 15px 30px;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1.5rem;
+            color: #ffcc00;
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 3px solid #ffaa00;
+            border-radius: 8px;
+            text-decoration: none;
+            text-shadow: 2px 2px 4px black;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.2s;
+            letter-spacing: 0.1em;
+        }
+
+        .page-link:hover {
+            background-color: rgba(50, 0, 0, 0.8);
+            color: #ffffff;
+            border-color: #ff5500;
+            transform: translateY(-5px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+            font-family: 'Roboto', sans-serif; 
+            font-size: 0.9rem;
+            color: #8B0000;
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* レスポンシブデザインの調整 */
+        @media (max-width: 768px) {
+            .page-container {
+                margin: 30px 20px;
+                padding: 15px;
+            }
+            h1 {
+                font-size: 2.8rem;
+            }
+            #game-section {
+                background-size: 150px auto; /* 小さめの画面では画像のサイズを調整 */
+                padding-right: 160px; /* 画像の分、右に余白を開ける */
+            }
+            #game-section ul {
+                width: 65%; /* 小さめの画面でのリスト幅 */
+            }
+            section h2 {
+                font-size: 2rem;
+            }
+            li {
+                font-size: 1rem;
+            }
+            .page-link {
+                font-size: 1.2rem;
+                padding: 12px 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-container {
+                margin: 20px 10px;
+                padding: 10px;
+            }
+            h1 {
+                font-size: 2.2rem;
+            }
+            #game-section {
+                background-size: 100px auto; /* さらに小さい画面でのサイズ調整 */
+                background-position: right top; /* 上部に寄せる */
+                padding-right: 110px; /* 余白調整 */
+            }
+            #game-section ul {
+                width: 100%; /* 極小画面ではフル幅に戻すか、個別の調整が必要 */
+                padding-right: 0; /* 右余白をなくす */
+            }
+            section h2 {
+                font-size: 1.8rem;
+            }
+            li {
+                font-size: 0.9rem;
+            }
+            .page-link {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <nav id="global_navi">
+            <ul>
+                <li><a href="index.html">Profile</a></li>
+                <li class="current"><a href="game-favorites.html">Favorites</a></li>
+                <li><a href="access.html">School</a></li>
+                <li><a href="sonota.html">Question</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-container">
+        <h1>🎮 好きなゲーム・漫画 🖋️</h1>
+        <P>         興味あるものがあったらクリックしてみてね～</P>
+
+        <section id="game-section"> 
+            <h2>🎮 ゲーム</h2>
+            <ul>
+                <li><a href="https://www.smashbros.com/ja_JP/" target="_blank">大乱闘スマッシュブラザーズ</a></li>
+                <li><a href="https://www.leagueoflegends.com/ja-jp/" target="_blank">League_of_Legends</a></li>
+                <li><a href="https://www.streetfighter.com/6/ja-jp" target="_blank">street_fighter6</a></li>
+                <li><a href="https://www.monsterhunter.com/ja/" target="_blank">Monster_Hunter</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>📚 漫画・アニメ</h2>
+            <ul>
+                <li><a href="https://jumpsq.shueisha.co.jp/rensai/darkdathering/" target="_blank">ダークギャザリング(アニメ・漫画)</a></li>
+                <li><a href="https://manga.line.me/product/periodic?id=Z0000822" target="_blank">全知的な読者の視点から（漫画）</a></li>
+                <li><a href="https://comic-walker.com/detail/KC_003921_S?episodeType=first" target="_blank">魔術師クノンは見えている（小説・漫画←好き）</a></li>
+                <li><a href="https://pocket.shonenmagazine.com/title/01191/episode/309458" target="_blank">シャングリラフロンティア（小説←好き・漫画・アニメ）</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>🍣 好きな食べ物</h2>
+            <ul>
+                <li>寿司（かに・えび・サーモン・納豆巻き）</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>🏃 好きな遊び</h2>
+            <ul>
+                <li>トランポリン</li>
+                <li>ボウリング</li>
+            </ul>
+        </section>
+    
+    <footer>
+        <div id="footer_nav">
+            <ul>
+                <li><a href="index.html">Profile</a></li>
+                <li class="current"><a href="game-favorites.html">Favorites</a></li>
+                <li><a href="access.html">School</a></li>
+                <li><a href="sonota.html">Question</a></li>
+            </ul>
+        </div>
+        <small>© 2025 自己紹介ページ</small>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,850 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Press+Start+2P&family=Roboto&family=Open+Sans:wght@300;400;600;700&family=Lato:wght@300;400;700&family=Montserrat:wght@400;600;700&display=swap');
+
+/* Global */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    color: #e0e0e0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    background-image: url('ground.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    font-family: 'Press Start 2P', cursive;
+    image-rendering: pixelated;
+}
+
+/* Welcome Section */
+.welcome-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url("P1000370.jpg") no-repeat center center;
+    background-size: cover;
+    margin-bottom: 50px;
+}
+
+.welcome-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+.welcome-content {
+    position: relative;
+    z-index: 3;
+    padding: 20px;
+}
+.welcome-content h1 {
+    font-family: 'Creepster', cursive;
+    font-size: 4.5rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 5px black;
+    letter-spacing: 0.1em;
+}
+
+.welcome-content p {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+    color: rgb(214, 3, 3);
+    text-shadow: 1px 1px 5px black;
+    margin-bottom: 2rem;
+}
+
+.scroll-button {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    background-color: black;
+    color: white;
+    border: 2px solid red;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    display: inline-block;
+}
+
+.scroll-button:hover {
+    background-color: red;
+    color: black;
+    border-color: white;
+}
+
+/* Main Content */
+.main-content-area {
+    padding-bottom: 50px;
+}
+
+.main-header {
+    text-align: center;
+    padding: 60px 20px 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-bottom: 2px solid #8B0000;
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+    box-sizing: border-box;
+}
+
+.main-header h1 {
+    font-family: 'Creepster', cursive;
+    font-size: 3.5rem;
+    color: #ffcc00;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin-bottom: 10px;
+    letter-spacing: 0.15em;
+}
+
+.main-header p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: #aaa;
+    margin: 0;
+}
+
+.intro-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    max-width: 900px;
+    margin: 30px auto 50px auto;
+    box-shadow: 0 0 20px rgba(255, 68, 68, 0.3);
+}
+
+.profile-photo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ff4444;
+    box-shadow: 0 0 25px rgba(255, 68, 68, 0.7);
+    margin-bottom: 30px;
+}
+
+.intro-text h2 {
+    font-family: 'Creepster', cursive;
+    font-size: 2.8rem;
+    color: #ff4444;
+    text-shadow: 1px 1px 3px black;
+    margin-bottom: 15px;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+.intro-text p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    text-align: center;
+}
+
+.content-section {
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    max-width: 900px;
+    margin: 30px auto 50px auto;
+    box-shadow: 0 0 15px rgba(255, 68, 68, 0.2);
+}
+
+.content-section h2 {
+    font-size: 2.5rem;
+    color: #ff4444;
+    text-shadow: 1px 1px 3px black;
+    margin-bottom: 1.5rem;
+    font-family: 'Creepster', cursive;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+#self-introduction {
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 8px;
+    max-width: 900px;
+    margin: 30px auto 50px auto;
+    box-shadow: 0 0 25px rgba(255, 68, 68, 0.5); 
+    border: 3px solid #ff4444; 
+}
+#self-introduction h2 {
+    font-size: 2.8rem; 
+    color: #ffcc00; 
+    text-shadow: 2px 2px 5px black; 
+    margin-bottom: 25px; 
+    border-bottom: 3px solid #ff4444; 
+    padding-bottom: 15px; 
+    line-height: 1.2; 
+}
+#self-introduction li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+    background-color: rgba(255, 255, 255, 0.08); 
+    padding: 12px 18px; 
+    margin-bottom: 10px; 
+    border-left: 6px solid #aaffaa; 
+    border-radius: 6px; 
+    transition: background-color 0.3s, transform 0.2s; 
+}
+
+#self-introduction li:hover {
+    background-color: rgba(255, 255, 255, 0.15); 
+    transform: translateX(5px); 
+}
+
+#self-introduction strong {
+    color: #ffcc00; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+}
+#self-introduction ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#self-introduction li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-left: 5px solid #8B0000;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+#self-introduction li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#self-introduction strong {
+    color: #aaffaa;
+}
+
+/* Contact Form */
+#contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.form-group label {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.9rem;
+    color: #aaffaa;
+    margin-bottom: 5px;
+}
+#contact-section input[type="text"],
+#contact-section input[type="email"],
+#contact-section textarea {
+    padding: 12px;
+    border: 2px solid #ff4444;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #e0e0e0;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+#contact-section input::placeholder,
+#contact-section textarea::placeholder {
+    color: #b0b0b0;
+}
+#contact-section button[type="submit"] {
+    background-color: #8B0000;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, transform 0.2s;
+    letter-spacing: 0.1em;
+    margin-top: 20px;
+}
+#contact-section button[type="submit"]:hover {
+    background-color: #ff4444;
+    transform: translateY(-3px);
+}
+
+/* Page Link */
+.page-link-section {
+    text-align: center;
+    margin: 50px auto;
+}
+.page-link {
+    display: inline-block;
+    padding: 15px 30px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5rem;
+    color: #ffcc00;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 3px solid #ffaa00;
+    border-radius: 8px;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px black;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.2s;
+    letter-spacing: 0.1em;
+}
+.page-link:hover {
+    background-color: rgba(50, 0, 0, 0.8);
+    color: #ffffff;
+    border-color: #ff5500;
+    transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    margin-top: 50px;
+    border-top: 2px solid #8B0000;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+footer #footer_nav {
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer #footer_nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    line-height: 1.5;
+}
+
+footer #footer_nav li {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.9rem;
+    border-left: solid 1px #aaffaa;
+    margin-left: 8px;
+    padding-left: 8px;
+    vertical-align: middle;
+}
+
+footer #footer_nav li:first-child {
+    border-left: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+footer #footer_nav li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    transition: color 0.3s, text-shadow 0.3s;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+    display: inline-block;
+}
+
+footer #footer_nav li a:hover {
+    color: #ffcc00;
+    background-color: transparent;
+    border-color: transparent;
+    text-shadow: 0 0 5px rgba(255, 204, 0, 0.7);
+}
+
+footer #footer_nav li.current a {
+    color: #ff4444;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: default;
+    text-shadow: 1px 1px 3px rgba(255, 68, 68, 0.7);
+}
+
+footer small {
+    display: block;
+    padding: 0;
+    color: #8B0000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Site Header */
+.site-header {
+    max-width: 900px; /* 他のコンテンツセクションと合わせる */
+    margin: 30px auto 50px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px solid #8B0000;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(255, 68, 68, 0.3);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+#global_navi {
+    width: 100%;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 68, 68, 0.5);
+    text-align: center;
+}
+
+#global_navi ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+#global_navi li a {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.1rem;
+    color: #aaffaa;
+    text-decoration: none;
+    padding: 8px 15px;
+    border: 2px solid #aaffaa;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, text-shadow 0.3s;
+    white-space: nowrap;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+#global_navi li a:hover {
+    background-color: #aaffaa;
+    color: #1a1a1a;
+    border-color: white;
+    text-shadow: none;
+}
+
+#global_navi li.current a {
+    background-color: #8B0000;
+    color: white;
+    border-color: white;
+    cursor: default;
+}
+
+/* Page Container for game-favorites.html */
+.page-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(255, 68, 68, 0.2);
+}
+.page-container p {
+    color: white;
+}
+
+.page-container h1 {
+    font-family: 'Creepster', cursive;
+    font-size: 3.5rem;
+    color: #ffcc00;
+    text-shadow: 2px 2px 5px rgba(23, 22, 22, 0.7);
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 0.15em;
+}
+
+.page-container section {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 40px;
+    border: 2px solid #8B0000;
+    box-shadow: 0 0 10px rgba(255, 68, 68, 0.1);
+}
+
+/* Game Section specific */
+#game-section {
+    position: relative;
+    overflow: hidden;
+    padding-right: 180px;
+    background-image: url('100.jpg');
+    background-repeat: no-repeat;
+    background-size: 150px auto;
+    background-position: right center;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#game-section h2,
+#game-section ul {
+    position: relative;
+    z-index: 2;
+}
+
+#game-section ul {
+    width: calc(100% - 180px);
+}
+
+.page-container section h2 {
+    font-family: 'Creepster', cursive;
+    font-size: 2.5rem;
+    color: #ff4444;
+    text-shadow: 1px 1px 3px black;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+.page-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.page-container li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-left: 5px solid #aaffaa;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.page-container li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+li a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    padding: 0;
+}
+
+li a:hover {
+    color: #ffdd00;
+    text-shadow: 0 0 5px rgba(255, 255, 0, 0.5);
+}
+
+/* Specific styles for School page (access.html) */
+#wrapper {
+    max-width: 900px; /* main-content-area の max-width に合わせる */
+    margin: 50px auto;
+    background-color: rgba(0, 0, 0, 0.6); /* 透明度のある暗い背景 */
+    border-radius: 8px; /* 角を丸く */
+    box-shadow: 0 0 15px rgba(255, 68, 68, 0.2); /* 赤系の影 */
+    padding: 30px;
+    box-sizing: border-box;
+    color: #e0e0e0; /* 明るい文字色 */
+    border: 2px solid #8B0000; /* 赤いボーダーを追加 */
+}
+
+#main {
+    padding: 0; 
+}
+
+article h1 {
+    font-family: 'Creepster', cursive; /* Creepsterフォントに変更 */
+    font-size: 3.5rem; /* welcome-content h1 に合わせる */
+    color: #ffcc00; /* 黄色系の文字色 */
+    text-align: center;
+    margin-bottom: 40px; /* 下マージンを調整 */
+    text-shadow: 2px 2px 5px rgba(23, 22, 22, 0.7); /* 影を強調 */
+    letter-spacing: 0.15em; /* 文字間隔を調整 */
+}
+
+.lead {
+    font-family: 'Roboto', sans-serif; /* Robotoフォントに変更 */
+    font-size: 1.1rem;
+    color: #e0e0e0; /* 明るい文字色 */
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* 影を追加 */
+}
+
+section {
+    background-color: rgba(0, 0, 0, 0.7); /* より濃い暗い背景 */
+    border: 2px solid #8B0000; /* 赤いボーダー */
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 40px; /* 下マージンを調整 */
+    box-shadow: 0 0 10px rgba(255, 68, 68, 0.1); /* 赤系の影 */
+}
+
+section h2 {
+    font-family: 'Creepster', cursive; /* Creepsterフォントに変更 */
+    font-size: 2.5rem; /* content-section h2 に合わせる */
+    color: #ff4444; /* 赤系の文字色 */
+    margin-bottom: 20px; /* 下マージンを調整 */
+    text-align: center;
+    border-bottom: none; /* 下線を削除 */
+    padding-bottom: 0; /* パディングを削除 */
+    text-shadow: 1px 1px 3px black; /* 影を強調 */
+    letter-spacing: 0.1em; /* 文字間隔を調整 */
+}
+
+section h3 {
+    font-family: 'Press Start 2P', cursive; /* Press Start 2Pフォントに変更 */
+    font-size: 1.3rem; /* サイズ調整 */
+    color: #aaffaa; /* 緑系の文字色 */
+    margin-bottom: 15px;
+    border-left: 5px solid #ff4444; /* 赤系のボーダーに変更 */
+    padding-left: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* 影を追加 */
+}
+
+section p {
+    font-family: 'Roboto', sans-serif; /* Robotoフォントに変更 */
+    font-size: 1.1rem; /* サイズ調整 */
+    line-height: 1.8;
+    color: #e0e0e0; /* 明るい文字色 */
+    margin-bottom: 15px;
+}
+
+iframe {
+    display: block;
+    margin: 30px auto;
+    max-width: 100%;
+    border: 2px solid #ff4444; /* 赤系のボーダーに変更 */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 68, 68, 0.3); /* 赤系の影 */
+}
+
+/* ========== レスポンシブデザインの調整 (スマホ対応) ========== */
+@media (max-width: 768px) {
+    #wrapper {
+        margin: 30px 15px;
+        padding: 20px;
+    }
+    article h1 {
+        font-size: 2.5rem; /* サイズ調整 */
+        margin-bottom: 30px;
+    }
+    .lead {
+        font-size: 1rem; /* サイズ調整 */
+        margin-bottom: 30px;
+    }
+    section {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+    section h2 {
+        font-size: 2rem; /* サイズ調整 */
+        margin-bottom: 15px;
+    }
+    section h3 {
+        font-size: 1.2rem; /* サイズ調整 */
+    }
+    section p {
+        font-size: 1rem; /* サイズ調整 */
+    }
+    iframe {
+        height: 280px; /* 高さ調整 */
+    }
+}
+
+@media (max-width: 480px) {
+    #wrapper {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+    article h1 {
+        font-size: 2rem; /* サイズ調整 */
+        margin-bottom: 25px;
+    }
+    .lead {
+        font-size: 0.9rem; /* サイズ調整 */
+        margin-bottom: 25px;
+    }
+    section {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    section h2 {
+        font-size: 1.6rem; /* サイズ調整 */
+        margin-bottom: 10px;
+    }
+    section h3 {
+        font-size: 1rem; /* サイズ調整 */
+    }
+    section p {
+        font-size: 0.9rem; /* サイズ調整 */
+    }
+    iframe {
+        height: 220px; /* 高さ調整 */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Footer */
+    footer {
+        padding: 15px;
+        gap: 10px;
+    }
+    footer #footer_nav {
+        text-align: center;
+        margin-bottom: 0;
+    }
+    footer #footer_nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    footer #footer_nav li {
+        font-size: 0.8rem;
+        padding: 0;
+        border-left: none;
+        margin-left: 0;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    footer #footer_nav li:first-child {
+        margin-top: 0;
+    }
+    footer small {
+        margin-top: 5px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    /* Welcome Section */
+    .welcome-content h1 { font-size: 3rem; }
+    .welcome-content p { font-size: 1.2rem; }
+    .scroll-button { font-size: 1rem; padding: 10px 20px; }
+
+    /* Main Content */
+    .main-header { padding: 40px 15px 30px; }
+    .main-header h1 { font-size: 2.5rem; }
+    .main-header p { font-size: 1.1rem; }
+    .intro-section { padding: 30px 15px; margin: 20px auto 30px auto; }
+    .profile-photo img { width: 150px; height: 150px; margin-bottom: 20px; }
+    .intro-text h2 { font-size: 2.2rem; }
+    .intro-text p { font-size: 1rem; }
+    .content-section { padding: 25px 15px; margin: 20px auto 30px auto; }
+    .content-section h2 { font-size: 2rem; }
+    #self-introduction li { font-size: 1rem; padding: 8px 12px; }
+    #contact-section input[type="text"],
+    #contact-section input[type="email"],
+    #contact-section textarea { font-size: 0.9rem; padding: 10px; }
+    #contact-section button[type="submit"] { font-size: 1rem; padding: 10px 20px; }
+    .page-link { font-size: 1.1rem; padding: 10px 20px; }
+
+    /* Page Container (game-favorites.html) */
+    .page-container { margin: 20px 15px; padding: 15px; }
+    .page-container h1 { font-size: 2.5rem; margin-bottom: 30px; }
+    .page-container section { padding: 20px; margin-bottom: 30px; }
+    .page-container section h2 { font-size: 2rem; margin-bottom: 15px; }
+    .page-container li { font-size: 1rem; }
+
+
+    /* Site Header */
+    .site-header { flex-direction: column; padding: 15px; margin: 20px auto 30px auto; }
+    #global_navi { margin-top: 15px; padding-top: 15px; }
+    #global_navi ul { flex-direction: column; gap: 10px; }
+    #global_navi li a { font-size: 0.9rem; padding: 8px 12px; }
+
+    /* Specific styles for School page (access.html) */
+    #wrapper { margin: 20px 15px; padding: 20px; }
+    article h1 { font-size: 2.2rem; }
+    .lead { font-size: 1rem; }
+    section { padding: 20px; }
+    section h2 { font-size: 1.8rem; }
+    section h3 { font-size: 1.4rem; }
+    section p { font-size: 0.95rem; }
+    iframe { height: 280px; }
+}
+
+@media (max-width: 480px) {
+    /* Footer */
+    footer #footer_nav li { font-size: 0.7rem; margin-bottom: 3px; }
+    footer small { font-size: 0.7rem; }
+
+    /* Welcome Section */
+    .welcome-content h1 { font-size: 2.2rem; }
+    .welcome-content p { font-size: 1rem; }
+    .scroll-button { font-size: 0.9rem; padding: 8px 15px; }
+
+    /* Main Content */
+    .main-header { padding: 30px 10px 20px; }
+    .main-header h1 { font-size: 2rem; }
+    .main-header p { font-size: 0.9rem; }
+    .intro-section { padding: 20px 10px; margin: 15px auto 20px auto; }
+    .profile-photo img { width: 120px; height: 120px; margin-bottom: 15px; }
+    .intro-text h2 { font-size: 1.8rem; }
+    .intro-text p { font-size: 0.9rem; }
+    .content-section { padding: 20px 10px; margin: 15px auto 20px auto; }
+    .content-section h2 { font-size: 1.6rem; }
+    #self-introduction li { font-size: 0.9rem; padding: 6px 10px; }
+    #contact-section input,
+    #contact-section textarea,
+    #contact-section button { font-size: 0.85rem; padding: 8px; }
+    #contact-section button[type="submit"] { font-size: 0.9rem; padding: 8px 15px; }
+    .page-link { font-size: 0.9rem; padding: 8px 15px; }
+
+    /* Page Container (game-favorites.html) */
+    .page-container { margin: 15px 10px; padding: 10px; }
+    .page-container h1 { font-size: 2.2rem; margin-bottom: 25px; }
+    .page-container section { padding: 15px; margin-bottom: 20px; }
+    .page-container section h2 { font-size: 1.8rem; margin-bottom: 10px; }
+    .page-container li { font-size: 0.9rem; }
+
+    /* Game Section specific */
+    #game-section {
+        background-size: 70px auto;
+        background-position: right top;
+        padding-right: 80px;
+    }
+    #game-section ul {
+        width: calc(100% - 80px);
+    }
+
+    /* Site Header */
+    #global_navi li a { font-size: 0.8rem; padding: 6px 10px; }
+
+    /* Specific styles for School page (access.html) */
+    #wrapper { margin: 15px 10px; padding: 15px; }
+    article h1 { font-size: 1.8rem; }
+    .lead { font-size: 0.9rem; }
+    section { padding: 15px; }
+    section h2 { font-size: 1.5rem; }
+    section h3 { font-size: 1.2rem; }
+    section p { font-size: 0.85rem; }
+    iframe { height: 220px; }
+}
