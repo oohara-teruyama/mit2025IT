@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja>
+<head>
+  <meta charset="UTS-8">
+  <title>自己紹介</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+        background-color: #f0f0f0
+}
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius:10px;
+    box-shadow: 0 0 10px rabaz(0,0,0,0.1);
+    max-width: 600px;
+    margin: auto;
+}
+h1 {
+    font-size: 16px;
+    color: #555;
+}
+      </style>
+  </head>
+  <body>
+      <div class="container">
+        <h1>自己紹介</h1>
+        <p><strong>名前:</strong>長山　有沙緋</p>
+        <p><strong>趣味:</strong>ゲーム、読書</p>
+  </div>
+</body>
+</html>
